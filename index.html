@@ -1,0 +1,3626 @@
+<!DOCTYPE html>
+<html lang="pt-BR">4
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kit Precificação Vet | Pare de cobrar no escuro · Thiago Alemão</title>
+  <meta name="description"
+    content="Curso prático + Planilha automática para veterinários precificarem com segurança e parar de trabalhar no prejuízo. Acesso imediato. Garantia de 7 dias.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kit Precificação Vet | Pare de cobrar no escuro">
+  <meta property="og:description"
+    content="Curso + Planilha para veterinários cobrarem com segurança e ter lucro real em cada serviço. Acesso imediato.">
+  <meta property="og:image" content="assets/images/hero.webp">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kit Precificação Vet | Pare de cobrar no escuro">
+  <meta name="twitter:description" content="Curso + Planilha para veterinários cobrarem com segurança.">
+
+  <!-- Meta Pixel -->
+  <script>
+    !function (f, b, e, v, n, t, s) { if (f.fbq) return; n = f.fbq = function () { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) }; if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0; t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s) }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '678415494826119');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=678415494826119&ev=PageView&noscript=1" /></noscript>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #0a1426;
+      --navy-2: #0e1a2f;
+      --navy-3: #131f37;
+      --navy-4: #1a2842;
+      --teal: #2dbfad;
+      --teal-2: #4dd1c0;
+      --teal-soft: rgba(45, 191, 173, .1);
+      --teal-line: rgba(45, 191, 173, .22);
+      --teal-line-soft: rgba(45, 191, 173, .12);
+      --gold: #e2c97e;
+      --gold-soft: rgba(226, 201, 126, .1);
+      --gold-line: rgba(226, 201, 126, .25);
+      --text: #ebedf2;
+      --text-2: #9ba3b4;
+      --text-3: #6b7280;
+      --line: rgba(255, 255, 255, .06);
+      --line-2: rgba(255, 255, 255, .1);
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0
+    }
+
+    html {
+      scroll-behavior: smooth;
+      overflow-x: hidden
+    }
+
+    body {
+      background: var(--navy);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.65;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    img {
+      max-width: 100%;
+      display: block
+    }
+
+    button {
+      font-family: inherit
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 0;
+      opacity: .12
+    }
+
+    .container {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 28px;
+      position: relative;
+      z-index: 1
+    }
+
+    .section {
+      padding: 120px 0;
+      position: relative;
+      z-index: 1
+    }
+
+    /* Typography */
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: 'Cormorant Garamond', serif;
+      line-height: 1.15;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      color: var(--text)
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: .7rem;
+      font-weight: 500;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 24px;
+      position: relative;
+      padding-left: 32px
+    }
+
+    .eyebrow::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 20px;
+      height: 1px;
+      background: var(--teal)
+    }
+
+    .eyebrow.center {
+      padding: 0 32px
+    }
+
+    .eyebrow.center::before {
+      left: 0;
+      width: 20px
+    }
+
+    .eyebrow.center::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      width: 20px;
+      height: 1px;
+      background: var(--teal)
+    }
+
+    h2.title {
+      font-size: clamp(2.2rem, 4.4vw, 3.4rem);
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 20px;
+      line-height: 1.1
+    }
+
+    h2.title em {
+      font-style: italic;
+      color: var(--teal);
+      font-weight: 400
+    }
+
+    .lead {
+      font-size: 1.05rem;
+      color: var(--text-2);
+      line-height: 1.75;
+      font-weight: 300;
+      max-width: 640px
+    }
+
+    .lead.center {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 72px
+    }
+
+    .section-head h2 {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 780px
+    }
+
+    .section-head .lead {
+      margin: 20px auto 0
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: .95rem;
+      padding: 18px 36px;
+      border-radius: 2px;
+      border: none;
+      cursor: pointer;
+      transition: all .25s ease;
+      letter-spacing: .04em;
+      white-space: nowrap;
+      text-transform: uppercase
+    }
+
+    .btn-primary {
+      background: var(--teal);
+      color: var(--navy)
+    }
+
+    .btn-primary:hover {
+      background: var(--teal-2);
+      transform: translateY(-1px);
+      box-shadow: 0 12px 28px rgba(45, 191, 173, .22)
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--teal-line)
+    }
+
+    .btn-ghost:hover {
+      background: var(--teal-soft);
+      border-color: var(--teal);
+      color: var(--teal)
+    }
+
+    .btn .arrow {
+      width: 14px;
+      height: 1px;
+      background: currentColor;
+      position: relative;
+      transition: width .25s
+    }
+
+    .btn .arrow::after {
+      content: '';
+      position: absolute;
+      right: -1px;
+      top: -3px;
+      width: 7px;
+      height: 7px;
+      border-top: 1px solid currentColor;
+      border-right: 1px solid currentColor;
+      transform: rotate(45deg)
+    }
+
+    .btn .arrow.down {
+      width: 1px;
+      height: 14px;
+      background: currentColor
+    }
+
+    .btn .arrow.down::after {
+      right: -3px;
+      top: auto;
+      bottom: -1px;
+      transform: rotate(135deg)
+    }
+
+    .btn:hover .arrow:not(.down) {
+      width: 22px
+    }
+
+    .btn:hover .arrow.down {
+      height: 22px
+    }
+
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .8s ease, transform .8s ease
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: none
+    }
+
+    /* Topbar */
+    .topbar {
+      background: var(--navy-2);
+      border-bottom: 1px solid var(--line);
+      padding: 11px 0;
+      position: relative;
+      z-index: 5
+    }
+
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 32px;
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--text-2);
+      font-weight: 500
+    }
+
+    .topbar-inner span.dot {
+      width: 3px;
+      height: 3px;
+      background: var(--teal);
+      border-radius: 50%;
+      display: inline-block
+    }
+
+    /* Nav */
+    .nav {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+      background: var(--navy);
+      position: relative;
+      z-index: 5
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between
+    }
+
+    .nav-logo {
+      height: 44px;
+      opacity: .95;
+      width: auto
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 24px
+    }
+
+    .nav-timer {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .78rem;
+      color: var(--text-2);
+      letter-spacing: .06em;
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .nav-timer .label {
+      color: var(--text-3);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .68rem
+    }
+
+    .nav-timer .time {
+      color: var(--teal);
+      font-weight: 500
+    }
+
+    .nav-btn {
+      background: transparent;
+      border: 1px solid var(--teal-line);
+      color: var(--text);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: .78rem;
+      padding: 11px 22px;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all .2s;
+      letter-spacing: .08em;
+      text-transform: uppercase
+    }
+
+    .nav-btn:hover {
+      background: var(--teal-soft);
+      border-color: var(--teal);
+      color: var(--teal)
+    }
+
+    /* Hero */
+    .hero {
+      padding: 100px 0 90px;
+      position: relative;
+      overflow: hidden
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -200px;
+      right: -200px;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(45, 191, 173, .06) 0%, transparent 70%);
+      pointer-events: none
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 80px;
+      align-items: center;
+      position: relative;
+      z-index: 1
+    }
+
+    .hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.7rem);
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 28px;
+      line-height: 1.08;
+      letter-spacing: -0.02em
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--teal);
+      font-weight: 400
+    }
+
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--text-2);
+      line-height: 1.75;
+      margin-bottom: 40px;
+      max-width: 520px;
+      font-weight: 300
+    }
+
+    .hero-meta {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-bottom: 40px;
+      padding-top: 32px;
+      border-top: 1px solid var(--line)
+    }
+
+    .hero-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 6px
+    }
+
+    .hero-meta-label {
+      font-size: .66rem;
+      color: var(--text-3);
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      font-weight: 500
+    }
+
+    .hero-meta-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      color: var(--text);
+      font-weight: 500;
+      line-height: 1.1
+    }
+
+    .hero-meta-value .teal {
+      color: var(--teal)
+    }
+
+    .hero-meta-divider {
+      width: 1px;
+      height: 40px;
+      background: var(--line-2)
+    }
+
+    .hero-cta-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 24px
+    }
+
+    .hero-trust {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: .78rem;
+      color: var(--text-3);
+      letter-spacing: .04em
+    }
+
+    .hero-trust svg {
+      color: var(--teal);
+      flex-shrink: 0
+    }
+
+    .hero-visual {
+      position: relative
+    }
+
+    .hero-visual img {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: saturate(.9) contrast(1.05);
+      border: 1px solid var(--teal-line-soft)
+    }
+
+    .hero-stat {
+      position: absolute;
+      background: var(--navy-3);
+      border: 1px solid var(--teal-line-soft);
+      padding: 18px 22px;
+      backdrop-filter: blur(8px)
+    }
+
+    .hero-stat-1 {
+      bottom: -22px;
+      left: -22px
+    }
+
+    .hero-stat-2 {
+      top: -22px;
+      right: -22px
+    }
+
+    .hero-stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      color: var(--teal);
+      font-weight: 600;
+      line-height: 1
+    }
+
+    .hero-stat-label {
+      font-size: .66rem;
+      color: var(--text-2);
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin-top: 6px;
+      font-weight: 500
+    }
+
+    /* Trust band */
+    .trust-band {
+      padding: 32px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--navy-2)
+    }
+
+    .trust-band-inner {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 36px;
+      font-size: .72rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--text-2);
+      font-weight: 500
+    }
+
+    .trust-band-inner .dot {
+      width: 3px;
+      height: 3px;
+      background: var(--teal);
+      border-radius: 50%;
+      display: inline-block
+    }
+
+    /* Pain */
+    .pain-section {
+      background: var(--navy);
+      padding: 120px 0
+    }
+
+    .pain-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      margin-top: 64px
+    }
+
+    .pain-card {
+      background: var(--navy);
+      padding: 48px 44px;
+      transition: background .3s
+    }
+
+    .pain-card:hover {
+      background: var(--navy-2)
+    }
+
+    .pain-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      color: var(--teal);
+      font-weight: 500;
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px
+    }
+
+    .pain-num::before {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--teal-line)
+    }
+
+    .pain-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 14px;
+      line-height: 1.2
+    }
+
+    .pain-card p {
+      font-size: .95rem;
+      color: var(--text-2);
+      line-height: 1.75;
+      font-weight: 300
+    }
+
+    /* Pivot quote */
+    .pivot-section {
+      background: var(--navy-2);
+      padding: 120px 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line)
+    }
+
+    .pivot-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      text-align: center
+    }
+
+    .pivot-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 5rem;
+      color: var(--teal);
+      line-height: .4;
+      margin-bottom: 8px;
+      font-weight: 400;
+      height: 40px;
+      opacity: .6
+    }
+
+    .pivot-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1.4;
+      margin-bottom: 32px;
+      font-style: italic
+    }
+
+    .pivot-quote em {
+      color: var(--teal);
+      font-style: italic;
+      font-weight: 500
+    }
+
+    .pivot-attr {
+      font-size: .78rem;
+      color: var(--text-3);
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      font-weight: 500
+    }
+
+    .pivot-attr::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 1px;
+      background: var(--teal);
+      margin-right: 16px;
+      vertical-align: middle
+    }
+
+    /* Author */
+    .author-section {
+      background: var(--navy);
+      padding: 140px 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .author-inner {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 80px;
+      align-items: center
+    }
+
+    .author-img-wrap img {
+      width: 100%;
+      display: block;
+      filter: saturate(.9) contrast(1.05);
+      border: 1px solid var(--teal-line-soft)
+    }
+
+    .author-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.6rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 6px;
+      line-height: 1.05
+    }
+
+    .author-role {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      color: var(--teal);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.4;
+      margin-bottom: 28px
+    }
+
+    .author-divider {
+      width: 48px;
+      height: 1px;
+      background: var(--teal);
+      margin-bottom: 32px;
+      opacity: .6
+    }
+
+    .author-text {
+      font-size: 1rem;
+      color: var(--text-2);
+      line-height: 1.85;
+      margin-bottom: 20px;
+      font-weight: 300
+    }
+
+    .author-text strong {
+      color: var(--text);
+      font-weight: 500
+    }
+
+    .author-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin-top: 48px;
+      background: var(--line);
+      border: 1px solid var(--line)
+    }
+
+    .author-stat {
+      background: var(--navy);
+      padding: 28px 22px;
+      text-align: center
+    }
+
+    .author-stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      color: var(--teal);
+      font-weight: 500;
+      line-height: 1
+    }
+
+    .author-stat-label {
+      font-size: .66rem;
+      color: var(--text-2);
+      margin-top: 10px;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-weight: 500
+    }
+
+    /* Kit (what's included) */
+    .kit-section {
+      background: var(--navy-2);
+      padding: 140px 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .kit-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 24px;
+      margin-top: 64px
+    }
+
+    .kit-col-right {
+      display: flex;
+      flex-direction: column;
+      gap: 24px
+    }
+
+    .kit-card {
+      background: var(--navy);
+      border: 1px solid var(--line);
+      padding: 44px 36px;
+      transition: border-color .3s, transform .3s;
+      position: relative
+    }
+
+    .kit-card:hover {
+      border-color: var(--teal-line);
+      transform: translateY(-3px)
+    }
+
+    .kit-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 1px;
+      background: var(--teal)
+    }
+
+    .kit-card-head {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 24px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .kit-icon {
+      width: 48px;
+      height: 48px;
+      border: 1px solid var(--teal-line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--teal);
+      flex-shrink: 0
+    }
+
+    .kit-card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 4px;
+      line-height: 1.2
+    }
+
+    .kit-card-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .78rem;
+      color: var(--text-3);
+      letter-spacing: .04em
+    }
+
+    .kit-card-meta strong {
+      color: var(--teal);
+      font-weight: 500
+    }
+
+    .kit-card-desc {
+      font-size: .95rem;
+      color: var(--text-2);
+      line-height: 1.75;
+      font-weight: 300;
+      margin-bottom: 24px
+    }
+
+    .kit-card-desc strong {
+      color: var(--text);
+      font-weight: 500
+    }
+
+    .kit-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px
+    }
+
+    .kit-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: .92rem;
+      color: var(--text-2);
+      line-height: 1.55;
+      font-weight: 300
+    }
+
+    .kit-list li svg {
+      color: var(--teal);
+      flex-shrink: 0;
+      margin-top: 4px
+    }
+
+    .kit-list li strong {
+      color: var(--text);
+      font-weight: 500
+    }
+
+    .kit-bonus-card {
+      background: var(--navy);
+      border: 1px dashed var(--gold-line);
+      padding: 32px 28px;
+      position: relative
+    }
+
+    .kit-bonus-tag {
+      position: absolute;
+      top: -9px;
+      left: 24px;
+      background: var(--navy-2);
+      padding: 0 12px;
+      font-family: 'Inter', sans-serif;
+      font-size: .62rem;
+      color: var(--gold);
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-weight: 600
+    }
+
+    .kit-bonus-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      color: var(--text);
+      font-weight: 500;
+      margin-bottom: 8px;
+      line-height: 1.2
+    }
+
+    .kit-bonus-desc {
+      font-size: .88rem;
+      color: var(--text-2);
+      line-height: 1.7;
+      font-weight: 300
+    }
+
+    .kit-bonus-meta {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .72rem;
+      color: var(--gold);
+      letter-spacing: .04em;
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid var(--gold-line);
+      opacity: .85
+    }
+
+    .kit-reassurance {
+      display: inline-flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--teal-soft);
+      border: 1px solid var(--teal-line);
+      padding: 18px 22px;
+      margin-top: 32px;
+      text-align: left;
+      max-width: 680px
+    }
+
+    .kit-reassurance svg {
+      color: var(--teal);
+      flex-shrink: 0;
+      margin-top: 3px
+    }
+
+    .kit-reassurance span {
+      font-size: .92rem;
+      color: var(--text-2);
+      line-height: 1.65;
+      font-weight: 300
+    }
+
+    .kit-reassurance strong {
+      color: var(--text);
+      font-weight: 500
+    }
+
+    /* Outcomes */
+    .outcomes-section {
+      background: var(--navy);
+      padding: 140px 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .outcomes-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--line);
+      margin-top: 64px;
+      border: 1px solid var(--line)
+    }
+
+    .outcome-card {
+      background: var(--navy);
+      padding: 40px 36px;
+      transition: background .3s
+    }
+
+    .outcome-card:hover {
+      background: var(--navy-2)
+    }
+
+    .outcome-icon {
+      width: 40px;
+      height: 40px;
+      border: 1px solid var(--teal-line);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+      color: var(--teal)
+    }
+
+    .outcome-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.35rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 12px;
+      line-height: 1.25
+    }
+
+    .outcome-card p {
+      font-size: .92rem;
+      color: var(--text-2);
+      line-height: 1.75;
+      font-weight: 300
+    }
+
+    /* For who */
+    .forwho-section {
+      background: var(--navy-2);
+      padding: 140px 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .forwho-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 64px
+    }
+
+    .forwho-card {
+      background: var(--navy);
+      border: 1px solid var(--line);
+      padding: 48px 40px;
+      transition: border-color .3s
+    }
+
+    .forwho-card:hover {
+      border-color: var(--teal-line)
+    }
+
+    .forwho-head {
+      margin-bottom: 32px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .forwho-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      color: var(--text);
+      font-weight: 500;
+      margin-bottom: 6px;
+      line-height: 1.2
+    }
+
+    .forwho-sub {
+      font-size: .74rem;
+      color: var(--teal);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-weight: 500
+    }
+
+    .forwho-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px
+    }
+
+    .forwho-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: .94rem;
+      color: var(--text-2);
+      line-height: 1.65;
+      font-weight: 300
+    }
+
+    .forwho-list li svg {
+      color: var(--teal);
+      flex-shrink: 0;
+      margin-top: 4px
+    }
+
+    /* Testimonials */
+    .testimonials-section {
+      background: var(--navy);
+      padding: 140px 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin-top: 64px;
+      background: var(--line);
+      border: 1px solid var(--line)
+    }
+
+    .testimonial {
+      background: var(--navy);
+      padding: 44px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      transition: background .3s
+    }
+
+    .testimonial:hover {
+      background: var(--navy-2)
+    }
+
+    .testimonial-mark {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3.5rem;
+      color: var(--teal);
+      line-height: .4;
+      font-weight: 400;
+      height: 32px;
+      opacity: .7
+    }
+
+    .testimonial-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.18rem;
+      color: var(--text);
+      line-height: 1.55;
+      font-weight: 400;
+      font-style: italic;
+      flex: 1
+    }
+
+    .testimonial-author {
+      padding-top: 24px;
+      border-top: 1px solid var(--line)
+    }
+
+    .testimonial-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      color: var(--text);
+      font-weight: 500;
+      margin-bottom: 4px
+    }
+
+    .testimonial-role {
+      font-size: .7rem;
+      color: var(--text-3);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-weight: 500
+    }
+
+    /* Offer */
+    .offer-section {
+      background: var(--navy-2);
+      padding: 140px 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .scarcity-band {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 14px 20px;
+      border: 1px solid var(--teal-line);
+      background: var(--teal-soft);
+      max-width: 560px;
+      margin: 0 auto 40px;
+      font-family: 'Inter', sans-serif;
+      font-size: .78rem;
+      color: var(--teal);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      font-weight: 500
+    }
+
+    .scarcity-band .dot-blink {
+      width: 8px;
+      height: 8px;
+      background: var(--teal);
+      border-radius: 50%;
+      animation: blink 1.6s ease-in-out infinite
+    }
+
+    @keyframes blink {
+
+      0%,
+      100% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: .35
+      }
+    }
+
+    .scarcity-band strong {
+      font-weight: 600;
+      color: var(--text)
+    }
+
+    .offer-box {
+      background: var(--navy);
+      border: 1px solid var(--teal-line-soft);
+      max-width: 880px;
+      margin: 0 auto;
+      position: relative;
+      padding: 56px 52px
+    }
+
+    .offer-box::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: 48px;
+      height: 48px;
+      border-top: 1px solid var(--teal);
+      border-left: 1px solid var(--teal)
+    }
+
+    .offer-box::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      width: 48px;
+      height: 48px;
+      border-bottom: 1px solid var(--teal);
+      border-right: 1px solid var(--teal)
+    }
+
+    .offer-stack-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      color: var(--text);
+      font-weight: 500;
+      margin-bottom: 28px;
+      text-align: center
+    }
+
+    .offer-stack {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 14px
+    }
+
+    .offer-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .offer-row:last-child {
+      border-bottom: none
+    }
+
+    .offer-row-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: .95rem;
+      color: var(--text);
+      font-weight: 400
+    }
+
+    .offer-row-label svg {
+      flex-shrink: 0;
+      color: var(--teal);
+      margin-top: 4px
+    }
+
+    .offer-row-price {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .88rem;
+      color: var(--text-2);
+      white-space: nowrap
+    }
+
+    .bonus-block {
+      background: var(--gold-soft);
+      border: 1px dashed var(--gold-line);
+      padding: 22px 24px;
+      margin: 24px 0 0
+    }
+
+    .bonus-block-title {
+      font-family: 'Inter', sans-serif;
+      font-size: .66rem;
+      color: var(--gold);
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .bonus-block-title::before {
+      content: '';
+      width: 14px;
+      height: 1px;
+      background: var(--gold)
+    }
+
+    .bonus-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 10px 0
+    }
+
+    .bonus-row+.bonus-row {
+      border-top: 1px solid rgba(226, 201, 126, .12)
+    }
+
+    .bonus-row-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: .92rem;
+      color: var(--text);
+      font-weight: 400
+    }
+
+    .bonus-row-label svg {
+      flex-shrink: 0;
+      color: var(--gold);
+      margin-top: 4px
+    }
+
+    .bonus-row-price {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .85rem;
+      color: var(--gold);
+      white-space: nowrap
+    }
+
+    .offer-total {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 0;
+      border-top: 1px solid var(--teal-line);
+      border-bottom: 1px solid var(--teal-line);
+      margin: 32px 0 36px
+    }
+
+    .offer-total-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      color: var(--text);
+      font-weight: 500
+    }
+
+    .offer-total-price {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.05rem;
+      color: var(--text-2);
+      text-decoration: line-through
+    }
+
+    .offer-price-row {
+      text-align: center;
+      padding: 48px 32px 36px;
+      background: var(--navy-2);
+      border: 1px solid var(--teal-line-soft);
+      margin-bottom: 32px;
+      position: relative
+    }
+
+    .offer-price-tag {
+      position: absolute;
+      top: -9px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--navy);
+      padding: 0 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: .66rem;
+      color: var(--teal);
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      font-weight: 600
+    }
+
+    .offer-price-anchor {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 14px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .92rem;
+      color: var(--text-3)
+    }
+
+    .offer-price-anchor .from {
+      text-decoration: line-through
+    }
+
+    .offer-price-off {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: .7rem;
+      color: var(--teal);
+      letter-spacing: .14em;
+      font-weight: 600;
+      text-transform: uppercase;
+      border: 1px solid var(--teal);
+      padding: 3px 8px
+    }
+
+    .offer-price-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4.2rem;
+      color: var(--teal);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px
+    }
+
+    .offer-price-main span.cents {
+      font-size: 2.2rem;
+      vertical-align: top;
+      margin-left: 4px
+    }
+
+    .offer-price-installment {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .92rem;
+      color: var(--text-2);
+      margin-top: 14px;
+      letter-spacing: .04em
+    }
+
+    .offer-price-cash {
+      font-size: .82rem;
+      color: var(--teal);
+      margin-top: 8px;
+      font-family: 'Inter', sans-serif
+    }
+
+    .offer-price-cash strong {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 500
+    }
+
+    .countdown-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 32px;
+      padding: 24px;
+      background: var(--navy-2);
+      border: 1px solid var(--line)
+    }
+
+    .countdown-label {
+      font-size: .66rem;
+      color: var(--text-3);
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      font-weight: 500
+    }
+
+    .countdown-digits {
+      display: flex;
+      align-items: center;
+      gap: 14px
+    }
+
+    .countdown-unit {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px
+    }
+
+    .countdown-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 2rem;
+      color: var(--text);
+      font-weight: 500;
+      letter-spacing: .04em;
+      min-width: 56px;
+      text-align: center
+    }
+
+    .countdown-unit-label {
+      font-size: .6rem;
+      color: var(--text-3);
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      font-weight: 500
+    }
+
+    .countdown-sep {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.4rem;
+      color: var(--text-3);
+      font-weight: 400
+    }
+
+    .offer-cta-area {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      align-items: center
+    }
+
+    .offer-cta-area .btn {
+      width: 100%;
+      padding: 22px;
+      font-size: 1rem
+    }
+
+    .offer-trust-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      flex-wrap: wrap;
+      font-size: .74rem;
+      color: var(--text-3);
+      letter-spacing: .04em;
+      margin-top: 6px
+    }
+
+    .offer-trust-row span {
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+
+    .offer-trust-row svg {
+      color: var(--teal);
+      flex-shrink: 0
+    }
+
+    /* Guarantee */
+    .guarantee-section {
+      background: var(--navy);
+      padding: 140px 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .guarantee-box {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 56px;
+      align-items: center;
+      max-width: 880px;
+      margin: 0 auto;
+      background: var(--navy-2);
+      border: 1px solid var(--teal-line-soft);
+      padding: 56px 56px;
+      position: relative
+    }
+
+    .guarantee-box::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      width: 48px;
+      height: 48px;
+      border-top: 1px solid var(--teal);
+      border-left: 1px solid var(--teal)
+    }
+
+    .guarantee-box::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      right: -1px;
+      width: 48px;
+      height: 48px;
+      border-bottom: 1px solid var(--teal);
+      border-right: 1px solid var(--teal)
+    }
+
+    .guarantee-seal {
+      width: 140px;
+      height: 140px;
+      border: 1px solid var(--teal);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      flex-shrink: 0;
+      position: relative
+    }
+
+    .guarantee-seal::before {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 1px solid var(--teal-line);
+      border-radius: 50%
+    }
+
+    .guarantee-seal-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      color: var(--teal);
+      font-weight: 500;
+      line-height: 1
+    }
+
+    .guarantee-seal-label {
+      font-size: .6rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--text-2);
+      margin-top: 6px;
+      font-weight: 500;
+      text-align: center
+    }
+
+    .guarantee-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      color: var(--text);
+      font-weight: 500;
+      margin-bottom: 16px;
+      line-height: 1.2
+    }
+
+    .guarantee-text {
+      font-size: .96rem;
+      color: var(--text-2);
+      line-height: 1.8;
+      font-weight: 300
+    }
+
+    .guarantee-text strong {
+      color: var(--text);
+      font-weight: 500
+    }
+
+    /* FAQ */
+    .faq-section {
+      background: var(--navy-2);
+      padding: 140px 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .faq-list {
+      max-width: 820px;
+      margin: 64px auto 0;
+      border-top: 1px solid var(--line)
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--line)
+    }
+
+    .faq-q {
+      width: 100%;
+      text-align: left;
+      padding: 28px 4px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      color: var(--text);
+      font-weight: 500;
+      line-height: 1.3;
+      transition: color .2s
+    }
+
+    .faq-q:hover {
+      color: var(--teal)
+    }
+
+    .faq-q .icon {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      position: relative
+    }
+
+    .faq-q .icon::before,
+    .faq-q .icon::after {
+      content: '';
+      position: absolute;
+      background: var(--teal);
+      transition: transform .3s
+    }
+
+    .faq-q .icon::before {
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      transform: translateY(-50%)
+    }
+
+    .faq-q .icon::after {
+      top: 0;
+      left: 50%;
+      height: 100%;
+      width: 1px;
+      transform: translateX(-50%)
+    }
+
+    .faq-item.open .faq-q .icon::after {
+      transform: translateX(-50%) rotate(90deg)
+    }
+
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease, padding .25s;
+      padding: 0 4px;
+      font-size: .95rem;
+      color: var(--text-2);
+      line-height: 1.85;
+      font-weight: 300
+    }
+
+    .faq-a strong {
+      color: var(--text);
+      font-weight: 500
+    }
+
+    .faq-item.open .faq-a {
+      max-height: 500px;
+      padding: 0 4px 28px
+    }
+
+    /* Final CTA */
+    .finalcta-section {
+      background: var(--navy);
+      padding: 160px 0;
+      border-top: 1px solid var(--line);
+      position: relative;
+      overflow: hidden
+    }
+
+    .finalcta-section::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(45, 191, 173, .06) 0%, transparent 60%);
+      pointer-events: none
+    }
+
+    .finalcta-inner {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1
+    }
+
+    .finalcta-inner h2 {
+      font-size: clamp(2.4rem, 5vw, 3.6rem);
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 28px;
+      line-height: 1.08;
+      letter-spacing: -0.02em
+    }
+
+    .finalcta-inner h2 em {
+      font-style: italic;
+      color: var(--teal);
+      font-weight: 400
+    }
+
+    .finalcta-sub {
+      font-size: 1.05rem;
+      color: var(--text-2);
+      line-height: 1.8;
+      margin-bottom: 48px;
+      font-weight: 300;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    .finalcta-price {
+      margin-bottom: 40px;
+      padding: 32px;
+      border-top: 1px solid var(--teal-line-soft);
+      border-bottom: 1px solid var(--teal-line-soft);
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto
+    }
+
+    .finalcta-from {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .82rem;
+      color: var(--text-3);
+      margin-bottom: 8px
+    }
+
+    .finalcta-from .strike {
+      text-decoration: line-through
+    }
+
+    .finalcta-main {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      color: var(--teal);
+      font-weight: 500;
+      line-height: 1
+    }
+
+    .finalcta-installment {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .85rem;
+      color: var(--text-2);
+      margin-top: 10px
+    }
+
+    .finalcta-note {
+      font-size: .74rem;
+      color: var(--text-3);
+      margin-top: 24px;
+      letter-spacing: .04em
+    }
+
+    .finalcta-timer-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 24px;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .78rem;
+      color: var(--teal);
+      letter-spacing: .06em
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--navy-2);
+      border-top: 1px solid var(--line);
+      padding: 80px 0 36px;
+      text-align: center;
+      position: relative
+    }
+
+    .footer-logo {
+      height: 64px;
+      margin: 0 auto 32px;
+      opacity: .85;
+      width: auto
+    }
+
+    .footer-cta {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      color: var(--text);
+      font-weight: 500;
+      margin-bottom: 32px;
+      font-style: italic
+    }
+
+    .footer-cta em {
+      color: var(--teal);
+      font-style: italic
+    }
+
+    .footer-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 48px;
+      flex-wrap: wrap;
+      margin-bottom: 56px
+    }
+
+    .footer-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-2);
+      font-size: .9rem;
+      font-weight: 400;
+      transition: color .2s
+    }
+
+    .footer-link:hover {
+      color: var(--teal)
+    }
+
+    .footer-link svg {
+      color: var(--teal);
+      flex-shrink: 0;
+      transition: transform .2s
+    }
+
+    .footer-link:hover svg {
+      transform: translateY(-1px)
+    }
+
+    .footer-divider {
+      width: 48px;
+      height: 1px;
+      background: var(--teal-line);
+      margin: 0 auto 32px;
+      opacity: .6
+    }
+
+    .footer-text {
+      font-size: .78rem;
+      color: var(--text-3);
+      line-height: 1.7;
+      max-width: 680px;
+      margin: 0 auto;
+      font-weight: 300
+    }
+
+    .footer-text a {
+      color: var(--text-2);
+      transition: color .2s;
+      border-bottom: 1px solid var(--line-2)
+    }
+
+    .footer-text a:hover {
+      color: var(--teal);
+      border-color: var(--teal-line)
+    }
+
+    .footer-text .sep {
+      color: var(--teal);
+      margin: 0 10px;
+      opacity: .6
+    }
+
+    /* Sticky CTA */
+    .sticky-cta {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      background: rgba(10, 20, 38, .96);
+      backdrop-filter: blur(16px);
+      border-top: 1px solid var(--teal-line);
+      padding: 18px 32px;
+      display: grid;
+      grid-template-columns: 1fr auto auto;
+      align-items: center;
+      gap: 36px;
+      transform: translateY(100%);
+      transition: transform .4s;
+      box-shadow: 0 -10px 32px rgba(0, 0, 0, .45)
+    }
+
+    .sticky-cta::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 1px;
+      background: var(--teal)
+    }
+
+    .sticky-cta.visible {
+      transform: none
+    }
+
+    .sticky-product {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      min-width: 0
+    }
+
+    .sticky-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: .62rem;
+      color: var(--teal);
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-weight: 600;
+      line-height: 1;
+      display: flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .sticky-eyebrow::before {
+      content: '';
+      width: 14px;
+      height: 1px;
+      background: var(--teal)
+    }
+
+    .sticky-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 14px;
+      line-height: 1;
+      flex-wrap: wrap
+    }
+
+    .sticky-from {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .82rem;
+      color: var(--text-3);
+      text-decoration: line-through;
+      text-decoration-thickness: 1px;
+      text-decoration-color: rgba(107, 114, 128, .5);
+      letter-spacing: .02em
+    }
+
+    .sticky-price {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.85rem;
+      color: var(--teal);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -0.01em
+    }
+
+    .sticky-installment {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: .74rem;
+      color: var(--text-2);
+      letter-spacing: .04em;
+      padding-left: 16px;
+      border-left: 1px solid var(--line-2);
+      font-weight: 400
+    }
+
+    .sticky-timer {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 0 32px;
+      height: 52px;
+      border-left: 1px solid var(--line);
+      border-right: 1px solid var(--line)
+    }
+
+    .sticky-timer svg {
+      color: var(--teal);
+      flex-shrink: 0
+    }
+
+    .sticky-timer-text {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      line-height: 1
+    }
+
+    .sticky-timer-label {
+      font-size: .58rem;
+      color: var(--text-3);
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      font-weight: 500
+    }
+
+    .sticky-timer-value {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.1rem;
+      color: var(--text);
+      font-weight: 500;
+      letter-spacing: .04em
+    }
+
+    .sticky-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--teal);
+      color: var(--navy);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: .82rem;
+      padding: 18px 34px;
+      border-radius: 2px;
+      border: none;
+      cursor: pointer;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      transition: all .2s;
+      flex-shrink: 0
+    }
+
+    .sticky-btn:hover {
+      background: var(--teal-2);
+      transform: translateY(-1px);
+      box-shadow: 0 8px 20px rgba(45, 191, 173, .25)
+    }
+
+    .sticky-btn .arrow {
+      width: 14px;
+      height: 1px;
+      background: currentColor;
+      position: relative;
+      transition: width .25s
+    }
+
+    .sticky-btn .arrow::after {
+      content: '';
+      position: absolute;
+      right: -1px;
+      top: -3px;
+      width: 7px;
+      height: 7px;
+      border-top: 1px solid currentColor;
+      border-right: 1px solid currentColor;
+      transform: rotate(45deg)
+    }
+
+    .sticky-btn:hover .arrow {
+      width: 20px
+    }
+
+    /* Lead modal */
+    .lead-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 1100;
+      background: rgba(0, 0, 0, .85);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s
+    }
+
+    .lead-overlay.open {
+      opacity: 1;
+      pointer-events: all
+    }
+
+    .lead-modal {
+      background: var(--navy-2);
+      border: 1px solid var(--teal-line);
+      max-width: 480px;
+      width: 100%;
+      position: relative;
+      padding: 48px 44px;
+      transform: translateY(20px);
+      transition: transform .3s;
+      max-height: 92vh;
+      overflow-y: auto
+    }
+
+    .lead-overlay.open .lead-modal {
+      transform: none
+    }
+
+    .lead-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: none;
+      border: none;
+      color: var(--text-3);
+      cursor: pointer;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      transition: color .2s
+    }
+
+    .lead-close:hover {
+      color: var(--teal)
+    }
+
+    .lead-eyebrow {
+      font-size: .66rem;
+      color: var(--teal);
+      letter-spacing: .2em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 14px
+    }
+
+    .lead-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.9rem;
+      color: var(--text);
+      font-weight: 500;
+      margin-bottom: 12px;
+      line-height: 1.15
+    }
+
+    .lead-sub {
+      font-size: .9rem;
+      color: var(--text-2);
+      margin-bottom: 28px;
+      line-height: 1.65;
+      font-weight: 300
+    }
+
+    .lead-field {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 14px
+    }
+
+    .lead-field label {
+      font-size: .7rem;
+      color: var(--text-3);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      font-weight: 500
+    }
+
+    .lead-field input,
+    .lead-field select {
+      background: var(--navy);
+      border: 1px solid var(--line-2);
+      padding: 14px 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: .95rem;
+      color: var(--text);
+      width: 100%;
+      transition: border-color .2s;
+      outline: none;
+      border-radius: 2px
+    }
+
+    .lead-field input:focus,
+    .lead-field select:focus {
+      border-color: var(--teal)
+    }
+
+    .lead-field input::placeholder {
+      color: var(--text-3)
+    }
+
+    .lead-field .error {
+      border-color: #e54b4b
+    }
+
+    .lead-submit {
+      background: var(--teal);
+      color: var(--navy);
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: .92rem;
+      padding: 16px;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      transition: background .2s;
+      border-radius: 2px;
+      margin-top: 8px;
+      width: 100%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px
+    }
+
+    .lead-submit:hover {
+      background: var(--teal-2)
+    }
+
+    .lead-submit:disabled {
+      opacity: .6;
+      cursor: not-allowed
+    }
+
+    .lead-trust {
+      font-size: .74rem;
+      color: var(--text-3);
+      text-align: center;
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px
+    }
+
+    .lead-trust svg {
+      color: var(--teal)
+    }
+
+    /* Responsive */
+    @media(max-width:960px) {
+
+      .section,
+      .pain-section,
+      .author-section,
+      .kit-section,
+      .outcomes-section,
+      .forwho-section,
+      .testimonials-section,
+      .offer-section,
+      .guarantee-section,
+      .faq-section {
+        padding: 80px 0
+      }
+
+      .finalcta-section {
+        padding: 96px 0
+      }
+
+      .hero {
+        padding: 64px 0 56px
+      }
+
+      .hero-inner {
+        grid-template-columns: 1fr;
+        gap: 56px
+      }
+
+      .hero-visual {
+        display: none
+      }
+
+      .hero-meta {
+        padding-top: 24px;
+        gap: 20px
+      }
+
+      .pain-grid {
+        grid-template-columns: 1fr
+      }
+
+      .kit-grid {
+        grid-template-columns: 1fr;
+        gap: 16px
+      }
+
+      .outcomes-grid {
+        grid-template-columns: 1fr
+      }
+
+      .author-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+        text-align: center
+      }
+
+      .author-img-wrap {
+        max-width: 340px;
+        margin: 0 auto
+      }
+
+      .author-divider {
+        margin-left: auto;
+        margin-right: auto
+      }
+
+      .testimonials-grid {
+        grid-template-columns: 1fr
+      }
+
+      .forwho-grid {
+        grid-template-columns: 1fr;
+        gap: 16px
+      }
+
+      .guarantee-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 32px;
+        padding: 40px 32px
+      }
+
+      .guarantee-seal {
+        margin: 0 auto
+      }
+
+      .offer-box {
+        padding: 44px 28px
+      }
+
+      .offer-price-main {
+        font-size: 3.4rem
+      }
+
+      .offer-price-main span.cents {
+        font-size: 1.8rem
+      }
+
+      .nav-timer {
+        display: none
+      }
+
+      .topbar-inner {
+        gap: 16px;
+        font-size: .62rem
+      }
+
+      .trust-band-inner {
+        gap: 24px;
+        font-size: .66rem
+      }
+
+      .author-stats {
+        grid-template-columns: 1fr 1fr 1fr
+      }
+
+      .section-head {
+        margin-bottom: 48px
+      }
+
+      .countdown-num {
+        font-size: 1.5rem;
+        min-width: 42px
+      }
+
+      .sticky-cta {
+        padding: 12px 16px;
+        gap: 12px;
+        grid-template-columns: 1fr auto
+      }
+
+      .sticky-timer,
+      .sticky-installment {
+        display: none
+      }
+
+      .sticky-eyebrow {
+        font-size: .55rem;
+        letter-spacing: .18em
+      }
+
+      .sticky-eyebrow::before {
+        display: none
+      }
+
+      .sticky-price {
+        font-size: 1.4rem
+      }
+
+      .sticky-from {
+        font-size: .74rem
+      }
+
+      .sticky-btn {
+        padding: 13px 22px;
+        font-size: .74rem;
+        gap: 8px
+      }
+    }
+
+    @media(max-width:600px) {
+      .hero h1 {
+        font-size: 2.2rem
+      }
+
+      .hero-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px
+      }
+
+      .hero-meta-divider {
+        display: none
+      }
+
+      .hero-cta-row {
+        flex-direction: column;
+        align-items: stretch
+      }
+
+      .hero-cta-row .btn {
+        width: 100%
+      }
+
+      .pain-card {
+        padding: 36px 28px
+      }
+
+      .kit-card {
+        padding: 32px 24px
+      }
+
+      .outcome-card {
+        padding: 32px 24px
+      }
+
+      .forwho-card {
+        padding: 32px 24px
+      }
+
+      .topbar-inner>*:nth-child(n+5) {
+        display: none
+      }
+
+      .trust-band-inner>*:nth-child(n+7) {
+        display: none
+      }
+
+      .testimonial {
+        padding: 36px 28px
+      }
+
+      .scarcity-band {
+        font-size: .7rem;
+        padding: 12px 16px
+      }
+
+      .offer-box {
+        padding: 36px 22px
+      }
+
+      .author-stats {
+        grid-template-columns: 1fr;
+        gap: 1px
+      }
+
+      .author-stat {
+        padding: 20px
+      }
+
+      .lead-modal {
+        padding: 36px 28px
+      }
+
+      .footer-links {
+        gap: 24px;
+        flex-direction: column
+      }
+
+      .footer-cta {
+        font-size: 1.15rem;
+        padding: 0 24px
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <span>Acesso imediato</span>
+        <span class="dot"></span>
+        <span>Garantia de 7 dias</span>
+        <span class="dot"></span>
+        <span>De veterinário para veterinário</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav-inner">
+        <img src="assets/images/logo-v3.webp" alt="Thiago Alemão · Gestão Empresarial Veterinária" class="nav-logo"
+          width="120" height="44" loading="eager">
+        <div class="nav-right">
+          <span class="nav-timer">
+            <span class="label">Oferta encerra em</span>
+            <span class="time" id="navTimer">--:--:--</span>
+          </span>
+          <button class="nav-btn" onclick="openLead()">Garantir acesso</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content fade-in visible">
+          <span class="eyebrow">Kit Precificação Vet</span>
+          <h1>Veterinário: pare de cobrar no escuro. <em>Comece a lucrar de verdade.</em></h1>
+          <p class="hero-sub">Curso prático e planilha automática para você saber exatamente quanto cobrar em cada
+            serviço, qual o lucro real de cada atendimento, e nunca mais chutar um preço por medo de errar.</p>
+
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <span class="hero-meta-label">Formato</span>
+              <span class="hero-meta-value">Curso + Planilha</span>
+            </div>
+            <div class="hero-meta-divider"></div>
+            <div class="hero-meta-item">
+              <span class="hero-meta-label">Acesso</span>
+              <span class="hero-meta-value"><span class="teal">Imediato</span></span>
+            </div>
+            <div class="hero-meta-divider"></div>
+            <div class="hero-meta-item">
+              <span class="hero-meta-label">Garantia</span>
+              <span class="hero-meta-value">7 dias</span>
+            </div>
+          </div>
+
+          <div class="hero-cta-row">
+            <button class="btn btn-primary" onclick="openLead()">
+              Quero meu acesso
+              <span class="arrow"></span>
+            </button>
+            <a href="#kit" class="btn btn-ghost">
+              Ver o que inclui
+              <span class="arrow down"></span>
+            </a>
+          </div>
+
+          <div class="hero-trust">
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+            Compra 100% segura · Acesso em minutos · Garantia incondicional
+          </div>
+        </div>
+
+        <div class="hero-visual fade-in visible">
+          <img src="assets/images/hero.webp" alt="Thiago Alemão" width="500" height="600" loading="eager">
+          <div class="hero-stat hero-stat-1">
+            <div class="hero-stat-num">100+</div>
+            <div class="hero-stat-label">Negócios atendidos</div>
+          </div>
+          <div class="hero-stat hero-stat-2">
+            <div class="hero-stat-num">500+</div>
+            <div class="hero-stat-label">Alunos formados</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust band -->
+  <div class="trust-band">
+    <div class="container">
+      <div class="trust-band-inner">
+        <span>Curso Prático</span>
+        <span class="dot"></span>
+        <span>Planilha Automática</span>
+        <span class="dot"></span>
+        <span>Acesso Vitalício</span>
+        <span class="dot"></span>
+        <span>Garantia de 7 Dias</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pain -->
+  <section class="pain-section">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow center">O Diagnóstico</span>
+        <h2 class="title">Se isso parece familiar,<br>o problema não é <em>falta de trabalho.</em></h2>
+        <p class="lead center">A maioria dos veterinários não tem problema no atendimento. Tem problema no preço que
+          cobra pelo atendimento.</p>
+      </div>
+
+      <div class="pain-grid">
+
+        <div class="pain-card fade-in">
+          <div class="pain-num">01</div>
+          <h3>Trabalha muito, sobra pouco</h3>
+          <p>A agenda está cheia, os atendimentos não param, mas no fim do mês o saldo bancário não reflete o esforço da
+            rotina. Você sente que produz mais do que ganha.</p>
+        </div>
+
+        <div class="pain-card fade-in">
+          <div class="pain-num">02</div>
+          <h3>Cobra na intuição</h3>
+          <p>Seu preço saiu do que o colega cobra ou do medo de perder o cliente. Nunca de um cálculo real de custo,
+            margem e lucro. E você sabe disso, mas não sabe por onde começar.</p>
+        </div>
+
+        <div class="pain-card fade-in">
+          <div class="pain-num">03</div>
+          <h3>Não sabe se tem lucro</h3>
+          <p>Você sabe quanto entra todo mês, mas não sabe o que sobra de verdade depois de descontar tudo que foi gasto
+            em cada serviço. Alguns podem estar te dando prejuízo silencioso.</p>
+        </div>
+
+        <div class="pain-card fade-in">
+          <div class="pain-num">04</div>
+          <h3>Medo de reajustar o preço</h3>
+          <p>Toda vez que pensa em aumentar, o medo de perder cliente fala mais alto que a conta bancária. Resultado:
+            você fica preso a um preço que não cobre o seu próprio esforço.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Pivot quote -->
+  <section class="pivot-section">
+    <div class="container">
+      <div class="pivot-inner fade-in">
+        <div class="pivot-mark">"</div>
+        <p class="pivot-quote">O veterinário não precisa virar contador. Mas precisa parar de definir preço de olhos
+          fechados. <em>Cobrar certo é o que separa quem trabalha por amor de quem vive da profissão.</em></p>
+        <p class="pivot-attr">Thiago Alemão, Médico Veterinário</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Author -->
+  <section class="author-section">
+    <div class="container">
+      <div class="author-inner">
+        <div class="author-img-wrap fade-in">
+          <img src="assets/images/autor.webp" alt="Thiago Alemão" width="380" height="480" loading="lazy">
+        </div>
+        <div class="fade-in">
+          <span class="eyebrow">Quem criou este kit</span>
+          <h2 class="author-name">Thiago Alemão</h2>
+          <p class="author-role">Médico veterinário, consultor de gestão empresarial veterinária</p>
+          <div class="author-divider"></div>
+          <p class="author-text">Sou veterinário, apaixonado por medicina integrativa, pai do Bernardo e atuo como
+            consultor de gestão para negócios veterinários há mais de 4 anos. Após anos atendendo colegas exaustos e sem
+            saber para onde o dinheiro ia, percebi um padrão claro: <strong>a maioria precificava no escuro</strong>.
+          </p>
+          <p class="author-text">Este kit nasceu disso. Uma necessidade real que vi de perto, centenas de vezes. O que
+            eu ensino aqui é exatamente o método que aplico nas empresas que atendo, sem fórmulas genéricas, só o que
+            funciona na prática de uma clínica veterinária.</p>
+
+          <div class="author-stats">
+            <div class="author-stat">
+              <div class="author-stat-num">4+</div>
+              <div class="author-stat-label">Anos de consultoria</div>
+            </div>
+            <div class="author-stat">
+              <div class="author-stat-num">100+</div>
+              <div class="author-stat-label">Negócios atendidos</div>
+            </div>
+            <div class="author-stat">
+              <div class="author-stat-num">500+</div>
+              <div class="author-stat-label">Alunos de mentoria</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kit / What's included -->
+  <section class="kit-section" id="kit">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow center">O que você leva</span>
+        <h2 class="title">O método e a ferramenta que eliminam<br>o <em>achismo da sua precificação.</em></h2>
+        <p class="lead center">Conhecimento + ferramenta. Os dois pilares para você cobrar com segurança e parar de
+          gerar lucro para o cliente em vez de para você.</p>
+      </div>
+
+      <div class="kit-grid">
+
+        <div class="kit-card fade-in">
+          <div class="kit-card-head">
+            <div class="kit-icon">
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" />
+                <polygon points="10,8 16,12 10,16 10,8" />
+              </svg>
+            </div>
+            <div>
+              <div class="kit-card-title">Curso Prático de Precificação</div>
+              <div class="kit-card-meta">Valor: <strong>R$ 397</strong> · 6 módulos</div>
+            </div>
+          </div>
+          <p class="kit-card-desc">Em vídeo-aulas diretas e objetivas, você aprende o método completo para precificar
+            com segurança. <strong>Do zero ao plano de preços completo.</strong></p>
+          <ul class="kit-list">
+            <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="20,6 9,17 4,12" />
+              </svg><span>Identifica seus custos reais por atendimento</span></li>
+            <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="20,6 9,17 4,12" />
+              </svg><span>Calcula margem de lucro com clareza</span></li>
+            <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="20,6 9,17 4,12" />
+              </svg><span>Domina precificação por custo e por valor</span></li>
+            <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="20,6 9,17 4,12" />
+              </svg><span>Evita os erros que fazem veterinários trabalharem no prejuízo</span></li>
+            <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="20,6 9,17 4,12" />
+              </svg><span>Checklist final para precificar com segurança</span></li>
+          </ul>
+        </div>
+
+        <div class="kit-col-right">
+
+          <div class="kit-card fade-in">
+            <div class="kit-card-head">
+              <div class="kit-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                  <rect x="3" y="3" width="7" height="7" />
+                  <rect x="14" y="3" width="7" height="7" />
+                  <rect x="14" y="14" width="7" height="7" />
+                  <rect x="3" y="14" width="7" height="7" />
+                </svg>
+              </div>
+              <div>
+                <div class="kit-card-title">Planilha Automática</div>
+                <div class="kit-card-meta">Valor: <strong>R$ 77</strong></div>
+              </div>
+            </div>
+            <p class="kit-card-desc">A ferramenta que <strong>calcula sozinha</strong> se você tem lucro ou prejuízo em
+              cada serviço. Você insere os dados, ela faz o trabalho. Funciona no Google Sheets ou Excel, zero
+              instalação.</p>
+          </div>
+
+          <div class="kit-bonus-card fade-in">
+            <span class="kit-bonus-tag">Bônus inclusos</span>
+            <div class="kit-bonus-title">Guia + Chamada de 15min com Thiago</div>
+            <p class="kit-bonus-desc">Guia Prático de Precificação Vet em PDF para consulta rápida, mais uma chamada
+              exclusiva de 15 minutos com Thiago para tirar suas principais dúvidas após o curso.</p>
+            <p class="kit-bonus-meta">Valor combinado: R$ 197</p>
+          </div>
+
+        </div>
+      </div>
+
+      <div style="text-align:center">
+        <div class="kit-reassurance fade-in">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="8" x2="12" y2="12" />
+            <line x1="12" y1="16" x2="12.01" y2="16" />
+          </svg>
+          <span><strong>Não precisa entender de finanças.</strong> A planilha foi feita para quem nunca abriu uma de
+            custos. Você insere os dados, e ela calcula tudo automaticamente.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outcomes -->
+  <section class="outcomes-section">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow center">Depois do kit, você vai</span>
+        <h2 class="title">Cobrar com clareza, segurança<br>e <em>lucro real.</em></h2>
+      </div>
+
+      <div class="outcomes-grid">
+
+        <div class="outcome-card fade-in">
+          <div class="outcome-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 100 7h5a3.5 3.5 0 110 7H6" />
+            </svg>
+          </div>
+          <h3>Saber exatamente quanto cobrar</h3>
+          <p>O preço mínimo de cada serviço para cobrir custos reais e gerar lucro. Sem chute, sem comparar com
+            concorrente, com base nos seus números.</p>
+        </div>
+
+        <div class="outcome-card fade-in">
+          <div class="outcome-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path d="M3 3v18h18M7 14l4-4 4 4 5-5" />
+            </svg>
+          </div>
+          <h3>Identificar serviços deficitários</h3>
+          <p>Quais procedimentos te dão lucro real e quais drenam seu caixa silenciosamente. Onde dobrar e onde reduzir,
+            com dados na mão.</p>
+        </div>
+
+        <div class="outcome-card fade-in">
+          <div class="outcome-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path d="M9 11l3 3L22 4M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
+            </svg>
+          </div>
+          <h3>Reajustar preço sem medo</h3>
+          <p>Argumentos sólidos para subir preço sem perder cliente. Quando o preço é justificado pelo valor entregue, a
+            justificativa fala por si.</p>
+        </div>
+
+        <div class="outcome-card fade-in">
+          <div class="outcome-icon">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 7v5l3 2" />
+            </svg>
+          </div>
+          <h3>Tomar decisões com dados</h3>
+          <p>Contratar, expandir, comprar equipamento, abrir nova unidade: cada decisão com a clareza dos números, não
+            na intuição que custa caro depois.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- For who -->
+  <section class="forwho-section">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow center">Para quem é</span>
+        <h2 class="title">Você se encaixa em<br><em>um desses dois perfis?</em></h2>
+        <p class="lead center">Autônomo ou gestor: se você atua na veterinária e quer clareza financeira, este kit é
+          para você.</p>
+      </div>
+
+      <div class="forwho-grid">
+
+        <div class="forwho-card fade-in">
+          <div class="forwho-head">
+            <div class="forwho-title">Veterinário Gestor</div>
+            <div class="forwho-sub">Clínicas · Hospitais · Laboratórios</div>
+          </div>
+          <ul class="forwho-list">
+            <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="20,6 9,17 4,12" />
+              </svg><span>Corrigir falhas de precificação que corroem o lucro do negócio</span></li>
+            <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="20,6 9,17 4,12" />
+              </svg><span>Estabelecer preços justos e lucrativos para todos os serviços</span></li>
+            <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="20,6 9,17 4,12" />
+              </svg><span>Identificar onde está perdendo dinheiro e o que ajustar</span></li>
+            <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="20,6 9,17 4,12" />
+              </svg><span>Criar um padrão de precificação que funcione na prática</span></li>
+            <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="20,6 9,17 4,12" />
+              </svg><span>Assumir o controle financeiro sem depender de terceiros</span></li>
+          </ul>
+        </div>
+
+        <div class="forwho-card fade-in">
+          <div class="forwho-head">
+            <div class="forwho-title">Veterinário Autônomo</div>
+            <div class="forwho-sub">Consultório · Domicílio · Especialista</div>
+          </div>
+          <ul class="forwho-list">
+            <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="20,6 9,17 4,12" />
+              </svg><span>Acabar de vez com o achismo na hora de cobrar pelos serviços</span></li>
+            <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="20,6 9,17 4,12" />
+              </svg><span>Saber exatamente quanto cobrar para garantir lucro real</span></li>
+            <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="20,6 9,17 4,12" />
+              </svg><span>Organizar a precificação mesmo sem equipe de apoio</span></li>
+            <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="20,6 9,17 4,12" />
+              </svg><span>Ter clareza dos custos e parar de "pagar para trabalhar"</span></li>
+            <li><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="20,6 9,17 4,12" />
+              </svg><span>Cobrar com segurança e sem medo de perder clientes</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow center">O que dizem</span>
+        <h2 class="title">Veterinários que aplicaram<br>e <em>passaram a lucrar de verdade.</em></h2>
+      </div>
+
+      <div class="testimonials-grid">
+
+        <div class="testimonial fade-in">
+          <div class="testimonial-mark">"</div>
+          <p class="testimonial-text">Eu cobrava abaixo do meu custo em três procedimentos sem saber. A planilha mostrou
+            em 10 minutos. Reajustei e ninguém saiu, ainda fechei o mês com mais lucro.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-name">Dr. Rafael M.</div>
+            <div class="testimonial-role">Cirurgia · São Paulo</div>
+          </div>
+        </div>
+
+        <div class="testimonial fade-in">
+          <div class="testimonial-mark">"</div>
+          <p class="testimonial-text">Achei que ia precisar de contador. Não precisei. Em uma tarde organizei minha
+            tabela e finalmente entendi por que dois serviços meus eram prejuízo puro.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-name">Dra. Mariana C.</div>
+            <div class="testimonial-role">Clínica Geral · Curitiba</div>
+          </div>
+        </div>
+
+        <div class="testimonial fade-in">
+          <div class="testimonial-mark">"</div>
+          <p class="testimonial-text">O melhor R$ 87 que já investi no negócio. O curso é direto, a planilha é simples,
+            e a chamada com Thiago deixou tudo no lugar. Recomendo.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-name">Dra. Juliana A.</div>
+            <div class="testimonial-role">Felinos · Belo Horizonte</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Offer -->
+  <section class="offer-section">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow center">A oferta</span>
+        <h2 class="title">Tudo isso por <em>10x de R$ 8,70</em></h2>
+        <p class="lead center">Menos do que uma consulta. Clareza total sobre o lucro de cada serviço que você presta.
+        </p>
+      </div>
+
+      <div class="scarcity-band fade-in">
+        <span class="dot-blink"></span>
+        <span>Restam <strong id="scarcityCount">12</strong> vagas com este preço</span>
+      </div>
+
+      <div class="offer-box fade-in">
+        <p class="offer-stack-title">O que você recebe</p>
+
+        <div class="offer-stack">
+          <div class="offer-row">
+            <span class="offer-row-label">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="20,6 9,17 4,12" />
+              </svg>
+              <span>Curso Prático de Precificação</span>
+            </span>
+            <span class="offer-row-price">R$ 397</span>
+          </div>
+          <div class="offer-row">
+            <span class="offer-row-label">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="20,6 9,17 4,12" />
+              </svg>
+              <span>Planilha Automática de Precificação</span>
+            </span>
+            <span class="offer-row-price">R$ 77</span>
+          </div>
+        </div>
+
+        <div class="bonus-block">
+          <div class="bonus-block-title">Bônus inclusos</div>
+          <div class="bonus-row">
+            <span class="bonus-row-label">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="20,6 9,17 4,12" />
+              </svg>
+              <span>Guia Prático de Precificação Vet (PDF)</span>
+            </span>
+            <span class="bonus-row-price">R$ 97</span>
+          </div>
+          <div class="bonus-row">
+            <span class="bonus-row-label">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polyline points="20,6 9,17 4,12" />
+              </svg>
+              <span>Chamada de 15min com Thiago</span>
+            </span>
+            <span class="bonus-row-price">R$ 100</span>
+          </div>
+        </div>
+
+        <div class="offer-total">
+          <span class="offer-total-label">Valor total</span>
+          <span class="offer-total-price">R$ 671,00</span>
+        </div>
+
+        <div class="offer-price-row">
+          <span class="offer-price-tag">Preço de hoje</span>
+          <div class="offer-price-anchor">
+            <span class="from">De R$ 597,00</span>
+            <span class="offer-price-off">85% off</span>
+          </div>
+          <div class="offer-price-main">R$ 87<span class="cents">,00</span></div>
+          <div class="offer-price-installment">ou 10x de R$ 8,70 sem juros</div>
+          <div class="offer-price-cash">à vista no Pix por <strong>R$ 82,65</strong> (5% de desconto)</div>
+        </div>
+
+        <div class="countdown-wrap">
+          <div class="countdown-label">Oferta expira em</div>
+          <div class="countdown-digits">
+            <div class="countdown-unit">
+              <div class="countdown-num" id="cd-h">00</div>
+              <div class="countdown-unit-label">horas</div>
+            </div>
+            <div class="countdown-sep">:</div>
+            <div class="countdown-unit">
+              <div class="countdown-num" id="cd-m">00</div>
+              <div class="countdown-unit-label">min</div>
+            </div>
+            <div class="countdown-sep">:</div>
+            <div class="countdown-unit">
+              <div class="countdown-num" id="cd-s">00</div>
+              <div class="countdown-unit-label">seg</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="offer-cta-area">
+          <button class="btn btn-primary" onclick="openLead()">
+            Garantir meu acesso
+            <span class="arrow"></span>
+          </button>
+          <div class="offer-trust-row">
+            <span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              </svg>
+              Garantia de 7 dias
+            </span>
+            <span>
+              <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                <rect x="3" y="11" width="18" height="11" rx="2" />
+                <path d="M7 11V7a5 5 0 0110 0v4" />
+              </svg>
+              Pagamento seguro via Ticto
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guarantee -->
+  <section class="guarantee-section">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow center">Garantia</span>
+        <h2 class="title">Risco zero.<br>Palavra de <em>veterinário.</em></h2>
+      </div>
+
+      <div class="guarantee-box fade-in">
+        <div class="guarantee-seal">
+          <div class="guarantee-seal-num">7</div>
+          <div class="guarantee-seal-label">dias de<br>garantia</div>
+        </div>
+        <div>
+          <h3 class="guarantee-title">100% do valor de volta. Sem perguntas.</h3>
+          <p class="guarantee-text">Você compra, acessa o curso completo, baixa a planilha e usa por <strong>7
+              dias</strong>. Se em qualquer momento desse período o conteúdo não fizer sentido para você, por qualquer
+            motivo, devolvemos 100% do valor. Sem questionamento, sem burocracia, sem pegadinha. A única coisa que não
+            pode acontecer é você seguir precificando no escuro.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-head fade-in">
+        <span class="eyebrow center">Dúvidas frequentes</span>
+        <h2 class="title">Antes de decidir, <em>veja isso.</em></h2>
+      </div>
+
+      <div class="faq-list fade-in">
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Para quem exatamente é o Kit de Precificação Vet?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">Para veterinários autônomos ou gestores que querem parar de precificar por achismo e ter
+            segurança e clareza sobre os preços cobrados, garantindo lucro em cada serviço, independente do porte da
+            clínica ou especialidade.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Preciso entender de contabilidade ou finanças?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">Não. A planilha foi desenhada justamente para quem não tem afinidade com números. Você
+            insere os dados, que o curso te ensina a identificar, e ela calcula tudo automaticamente.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Como funciona a chamada de 15 minutos com Thiago?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">Após assistir ao curso e usar a planilha, você agenda uma chamada de 15 minutos via Google
+            Meet ou Zoom para tirar suas principais dúvidas com o Thiago. É um acompanhamento rápido para ajustar pontos
+            específicos da sua aplicação.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Preciso instalar algum programa específico?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">Não. A planilha funciona 100% online no Google Sheets (gratuito) ou pode ser baixada para
+            Excel, sem instalação adicional. Os vídeos do curso também ficam acessíveis pela plataforma online.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Por quanto tempo terei acesso ao kit?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">O acesso é vitalício. Você pode revisitar o curso e usar a planilha sempre que precisar,
+            inclusive em atualizações futuras do material.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>O kit ensina a precificar produtos também?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">O foco é em serviços veterinários, mas a lógica do método se aplica a produtos também, pois
+            os princípios de custo e margem são os mesmos. Quem precifica serviço bem consegue precificar produto sem
+            dificuldade.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>E se eu quiser o reembolso?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">É simples. Nos primeiros 7 dias após a compra, basta enviar um e-mail solicitando o
+            reembolso. Devolvemos 100% do valor sem questionamento e sem burocracia, conforme a Lei do Consumidor.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" aria-expanded="false">
+            <span>Terei suporte se tiver dúvidas adicionais?</span>
+            <span class="icon" aria-hidden="true"></span>
+          </button>
+          <div class="faq-a">Sim. Além da chamada de 15 minutos inclusa, você pode falar diretamente pelo Instagram
+            <strong>@thiagoalemaovet</strong> ou pelo e-mail <strong>contato@thiagoalemao.com.br</strong>.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="finalcta-section">
+    <div class="container">
+      <div class="finalcta-inner fade-in">
+        <span class="eyebrow center">Última chamada</span>
+        <h2>Chega de trabalhar muito<br>e <em>lucrar pouco.</em></h2>
+        <p class="finalcta-sub">Acesso imediato. Você pode aplicar o método ainda esta semana e ver os primeiros ajustes
+          no caixa antes do fim do mês. Garantia incondicional de 7 dias se não fizer sentido.</p>
+
+        <div class="finalcta-price">
+          <p class="finalcta-from"><span class="strike">De R$ 597,00</span> por</p>
+          <p class="finalcta-main">R$ 87,00</p>
+          <p class="finalcta-installment">10x de R$ 8,70 · ou R$ 82,65 no Pix</p>
+        </div>
+
+        <button class="btn btn-primary" onclick="openLead()" style="padding:22px 48px;font-size:1rem">
+          Quero meu acesso
+          <span class="arrow"></span>
+        </button>
+
+        <p class="finalcta-note">Acesso imediato · Garantia de 7 dias · Sem risco</p>
+
+        <div class="finalcta-timer-row">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="9" />
+            <path d="M12 7v5l3 2" />
+          </svg>
+          Oferta encerra em <span id="footerTimer">--:--:--</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <img src="assets/images/logo-v3.webp" alt="Thiago Alemão · Gestão Empresarial Veterinária" class="footer-logo"
+      width="180" height="64" loading="lazy">
+
+    <p class="footer-cta">Ainda tem dúvidas? <em>Fale com a gente antes de decidir.</em></p>
+
+    <div class="footer-links">
+      <a href="mailto:contato@thiagoalemao.com.br" class="footer-link">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+          <polyline points="22,6 12,13 2,6" />
+        </svg>
+        contato@thiagoalemao.com.br
+      </a>
+      <a href="https://www.instagram.com/thiagoalemaovet?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+        class="footer-link" target="_blank" rel="noopener">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6" viewBox="0 0 24 24">
+          <rect x="2" y="2" width="20" height="20" rx="5" />
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+        </svg>
+        @thiagoalemaovet
+      </a>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <p class="footer-text">
+      Thiago Alemão · Gestão Empresarial Veterinária<span class="sep">·</span>CNPJ: 39.504.037/0001-92<br>
+      <a href="https://www.thiagoalemao.com.br/termos">Termos de Uso</a><span class="sep">|</span><a
+        href="https://www.thiagoalemao.com.br/privacidade">Política de Privacidade</a>
+    </p>
+  </footer>
+
+  <!-- Sticky CTA -->
+  <div class="sticky-cta" id="sticky-cta">
+    <div class="sticky-product">
+      <span class="sticky-eyebrow">Kit Precificação Vet</span>
+      <div class="sticky-price-row">
+        <span class="sticky-from">R$ 597</span>
+        <span class="sticky-price">R$ 87</span>
+        <span class="sticky-installment">10x de R$ 8,70 sem juros</span>
+      </div>
+    </div>
+    <div class="sticky-timer">
+      <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3 2" />
+      </svg>
+      <div class="sticky-timer-text">
+        <span class="sticky-timer-label">Oferta encerra em</span>
+        <span class="sticky-timer-value" id="stickyTimer">--:--:--</span>
+      </div>
+    </div>
+    <button class="sticky-btn" onclick="openLead()">
+      Garantir acesso
+      <span class="arrow"></span>
+    </button>
+  </div>
+
+  <!-- Lead modal -->
+  <div id="lead-modal" class="lead-overlay" role="dialog" aria-modal="true" aria-labelledby="lead-title">
+    <div class="lead-modal">
+      <button class="lead-close" onclick="closeLead()" aria-label="Fechar">×</button>
+      <p class="lead-eyebrow">Kit Precificação Vet</p>
+      <h3 class="lead-title" id="lead-title">Só mais um passo</h3>
+      <p class="lead-sub">Preencha seus dados para garantir o acesso. Em seguida você será redirecionado para o
+        pagamento.</p>
+
+      <form id="lead-form" novalidate>
+        <div class="lead-field">
+          <label for="lead-nome">Nome completo</label>
+          <input type="text" id="lead-nome" name="nome" required placeholder="Seu nome completo" autocomplete="name">
+        </div>
+        <div class="lead-field">
+          <label for="lead-cargo">Você é</label>
+          <select id="lead-cargo" name="cargo" required>
+            <option value="">Selecione seu perfil</option>
+            <option value="Veterinário Gestor">Veterinário Gestor (clínica / hospital)</option>
+            <option value="Veterinário Autônomo">Veterinário Autônomo</option>
+          </select>
+        </div>
+        <div class="lead-field">
+          <label for="lead-email">E-mail</label>
+          <input type="email" id="lead-email" name="email" required placeholder="seu@email.com" autocomplete="email">
+        </div>
+        <div class="lead-field">
+          <label for="lead-tel">WhatsApp</label>
+          <input type="tel" id="lead-tel" name="telefone" required placeholder="(11) 99999-9999" autocomplete="tel"
+            maxlength="15">
+        </div>
+        <button type="submit" class="lead-submit">
+          Garantir meu acesso
+          <span class="arrow" style="width:14px;height:1px;background:currentColor;position:relative"></span>
+        </button>
+      </form>
+
+      <p class="lead-trust">
+        <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <rect x="3" y="11" width="18" height="11" rx="2" />
+          <path d="M7 11V7a5 5 0 0110 0v4" />
+        </svg>
+        Seus dados estão seguros. Sem spam.
+      </p>
+    </div>
+  </div>
+
+  <script>
+    const CRM_WEBHOOK = 'https://lyrzvwwjrfilzytymvnq.supabase.co/functions/v1/hyper-worker';
+    const CRM_API_KEY = 'thiago_site_c5aa3751c49d4e52';
+    const CHECKOUT_URL = 'https://payment.ticto.app/O59BC515A';
+
+    // Lead modal
+    const leadOverlay = document.getElementById('lead-modal');
+    const leadForm = document.getElementById('lead-form');
+
+    function openLead() {
+      if (sessionStorage.getItem('kpv_lead_done')) {
+        window.location.href = CHECKOUT_URL;
+        return;
+      }
+      leadOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      setTimeout(() => {
+        const first = document.getElementById('lead-nome');
+        if (first) first.focus();
+      }, 200);
+      if (typeof fbq !== 'undefined') fbq('track', 'InitiateCheckout');
+    }
+
+    function closeLead() {
+      leadOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    leadOverlay.addEventListener('click', function (e) {
+      if (e.target === leadOverlay) closeLead();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeLead();
+    });
+
+    // Phone mask
+    document.getElementById('lead-tel').addEventListener('input', function () {
+      let v = this.value.replace(/\D/g, '').slice(0, 11);
+      if (v.length > 10) v = v.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
+      else if (v.length > 6) v = v.replace(/^(\d{2})(\d{4})(\d*)$/, '($1) $2-$3');
+      else if (v.length > 2) v = v.replace(/^(\d{2})(\d*)$/, '($1) $2');
+      this.value = v;
+    });
+
+    // Form submit
+    leadForm.addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const btn = this.querySelector('.lead-submit');
+
+      let valid = true;
+      ['lead-nome', 'lead-cargo', 'lead-email', 'lead-tel'].forEach(function (id) {
+        const el = document.getElementById(id);
+        el.classList.remove('error');
+        if (!el.value.trim()) { el.classList.add('error'); valid = false; }
+      });
+      if (!valid) return;
+
+      btn.disabled = true;
+      btn.textContent = 'Enviando...';
+
+      const cargoRaw = document.getElementById('lead-cargo').value;
+      const perfil = cargoRaw === 'Veterinário Gestor' ? 'gestor' : 'autonomo';
+      const payload = {
+        name: document.getElementById('lead-nome').value.trim(),
+        email: document.getElementById('lead-email').value.trim(),
+        phone: document.getElementById('lead-tel').value.trim(),
+        perfil,
+        source: 'kit',
+        custom: { timestamp: new Date().toISOString() }
+      };
+
+      try {
+        await fetch(CRM_WEBHOOK, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-api-key': CRM_API_KEY },
+          body: JSON.stringify(payload)
+        });
+      } catch (_) { }
+
+      sessionStorage.setItem('kpv_lead_done', '1');
+      if (typeof fbq !== 'undefined') fbq('track', 'Lead');
+      window.location.href = CHECKOUT_URL;
+    });
+
+    // FAQ accordion
+    document.querySelectorAll('.faq-q').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(i => {
+          i.classList.remove('open');
+          const q = i.querySelector('.faq-q');
+          if (q) q.setAttribute('aria-expanded', 'false');
+        });
+        if (!wasOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Scroll fade-in
+    const fadeObs = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          fadeObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
+
+    // Countdown 24h evergreen
+    (function () {
+      const DURATION = 24 * 60 * 60 * 1000;
+      const KEY = 'kpv_deadline';
+
+      let deadline = parseInt(localStorage.getItem(KEY));
+      if (!deadline || deadline < Date.now()) {
+        deadline = Date.now() + DURATION;
+        localStorage.setItem(KEY, deadline);
+      }
+
+      function pad(n) { return String(n).padStart(2, '0'); }
+
+      function tick() {
+        const diff = deadline - Date.now();
+        if (diff <= 0) {
+          deadline = Date.now() + DURATION;
+          localStorage.setItem(KEY, deadline);
+          return;
+        }
+        const h = Math.floor(diff / 3600000);
+        const m = Math.floor((diff % 3600000) / 60000);
+        const s = Math.floor((diff % 60000) / 1000);
+
+        const elH = document.getElementById('cd-h');
+        const elM = document.getElementById('cd-m');
+        const elS = document.getElementById('cd-s');
+        if (elH) elH.textContent = pad(h);
+        if (elM) elM.textContent = pad(m);
+        if (elS) elS.textContent = pad(s);
+
+        const hms = `${pad(h)}:${pad(m)}:${pad(s)}`;
+        ['navTimer', 'footerTimer', 'stickyTimer'].forEach(id => {
+          const el = document.getElementById(id);
+          if (el) el.textContent = hms;
+        });
+      }
+
+      tick();
+      setInterval(tick, 1000);
+    })();
+
+    // Sticky CTA
+    (function () {
+      const bar = document.getElementById('sticky-cta');
+      const hero = document.querySelector('.hero');
+      if (!bar || !hero) return;
+      const io = new IntersectionObserver(([e]) => {
+        bar.classList.toggle('visible', !e.isIntersecting);
+      }, { threshold: 0 });
+      io.observe(hero);
+    })();
+  </script>
+
+</body>
+
+</html>
