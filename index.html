@@ -2380,20 +2380,22 @@
       .offer-section,
       .guarantee-section,
       .faq-section {
+        padding: 72px 0
+      }
+
+      .pivot-section { padding: 72px 0 }
+
+      .finalcta-section {
         padding: 80px 0
       }
 
-      .finalcta-section {
-        padding: 96px 0
-      }
-
       .hero {
-        padding: 64px 0 56px
+        padding: 56px 0 48px
       }
 
       .hero-inner {
         grid-template-columns: 1fr;
-        gap: 56px
+        gap: 0
       }
 
       .hero-visual {
@@ -2411,21 +2413,21 @@
 
       .kit-grid {
         grid-template-columns: 1fr;
-        gap: 16px
+        gap: 12px
       }
 
       .outcomes-grid {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr 1fr
       }
 
       .author-inner {
         grid-template-columns: 1fr;
-        gap: 48px;
+        gap: 40px;
         text-align: center
       }
 
       .author-img-wrap {
-        max-width: 340px;
+        max-width: 300px;
         margin: 0 auto
       }
 
@@ -2435,19 +2437,19 @@
       }
 
       .testimonials-grid {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr 1fr
       }
 
       .forwho-grid {
         grid-template-columns: 1fr;
-        gap: 16px
+        gap: 12px
       }
 
       .guarantee-box {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 32px;
-        padding: 40px 32px
+        gap: 28px;
+        padding: 36px 28px
       }
 
       .guarantee-seal {
@@ -2455,15 +2457,15 @@
       }
 
       .offer-box {
-        padding: 44px 28px
+        padding: 40px 28px
       }
 
       .offer-price-main {
-        font-size: 3.4rem
+        font-size: 3.2rem
       }
 
       .offer-price-main span.cents {
-        font-size: 1.8rem
+        font-size: 1.6rem
       }
 
       .nav-timer {
@@ -2476,8 +2478,8 @@
       }
 
       .trust-band-inner {
-        gap: 24px;
-        font-size: .66rem
+        gap: 20px;
+        font-size: .64rem
       }
 
       .author-stats {
@@ -2485,12 +2487,12 @@
       }
 
       .section-head {
-        margin-bottom: 48px
+        margin-bottom: 40px
       }
 
       .countdown-num {
         font-size: 1.5rem;
-        min-width: 42px
+        min-width: 40px
       }
 
       .sticky-cta {
@@ -2529,87 +2531,244 @@
     }
 
     @media(max-width:600px) {
+
+      /* Container */
+      .container {
+        padding: 0 18px
+      }
+
+      /* Topbar — oculta no mobile, limpa o topo */
+      .topbar {
+        display: none
+      }
+
+      /* Nav */
+      .nav {
+        padding: 14px 0
+      }
+
+      .nav-logo {
+        height: 34px
+      }
+
+      .nav-btn {
+        font-size: .72rem;
+        padding: 9px 16px
+      }
+
+      /* Trust band — scroll horizontal, sem quebra de linha */
+      .trust-band {
+        padding: 18px 0
+      }
+
+      .trust-band-inner {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        justify-content: flex-start;
+        padding: 0 18px;
+        gap: 18px;
+        font-size: .64rem;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none
+      }
+
+      .trust-band-inner::-webkit-scrollbar {
+        display: none
+      }
+
+      /* Hero */
+      .hero {
+        padding: 36px 0 32px
+      }
+
       .hero h1 {
-        font-size: 2.2rem
+        font-size: 1.85rem;
+        margin-bottom: 18px
+      }
+
+      .hero-sub {
+        font-size: .95rem;
+        line-height: 1.7;
+        margin-bottom: 24px
       }
 
       .hero-meta {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        padding-top: 18px;
+        margin-bottom: 24px
       }
 
       .hero-meta-divider {
         display: none
       }
 
+      .hero-meta-value {
+        font-size: 1.2rem
+      }
+
       .hero-cta-row {
         flex-direction: column;
-        align-items: stretch
+        align-items: stretch;
+        gap: 12px
       }
 
       .hero-cta-row .btn {
-        width: 100%
+        width: 100%;
+        justify-content: center
       }
 
+      .hero-trust {
+        font-size: .74rem
+      }
+
+      /* Seções */
+      .section,
+      .pain-section,
+      .author-section,
+      .kit-section,
+      .outcomes-section,
+      .forwho-section,
+      .testimonials-section,
+      .offer-section,
+      .guarantee-section,
+      .faq-section {
+        padding: 52px 0
+      }
+
+      .pivot-section {
+        padding: 52px 0
+      }
+
+      .finalcta-section {
+        padding: 64px 0
+      }
+
+      .section-head {
+        margin-bottom: 32px
+      }
+
+      .eyebrow {
+        margin-bottom: 16px
+      }
+
+      .lead {
+        font-size: .95rem
+      }
+
+      /* Pain */
       .pain-card {
-        padding: 36px 28px
+        padding: 28px 20px
       }
 
+      .pain-card h3 {
+        font-size: 1.35rem
+      }
+
+      /* Kit */
       .kit-card {
-        padding: 32px 24px
+        padding: 24px 20px
+      }
+
+      .kit-bonus-card {
+        padding: 24px 20px
+      }
+
+      /* Outcomes */
+      .outcomes-grid {
+        grid-template-columns: 1fr
       }
 
       .outcome-card {
-        padding: 32px 24px
+        padding: 24px 20px
       }
 
+      /* Forwho */
       .forwho-card {
-        padding: 32px 24px
+        padding: 24px 20px
       }
 
-      .topbar-inner>*:nth-child(n+5) {
-        display: none
+      .forwho-head {
+        margin-bottom: 24px;
+        padding-bottom: 18px
       }
 
-      .trust-band-inner>*:nth-child(n+7) {
-        display: none
-      }
-
-      .testimonial {
-        padding: 36px 28px
-      }
-
-      .scarcity-band {
-        font-size: .7rem;
-        padding: 12px 16px
-      }
-
-      .offer-box {
-        padding: 36px 22px
-      }
-
+      /* Author */
       .author-stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 1px
       }
 
       .author-stat {
-        padding: 20px
+        padding: 18px 14px
       }
 
+      .author-stat-num {
+        font-size: 1.8rem
+      }
+
+      /* Testimonials */
+      .testimonials-grid {
+        grid-template-columns: 1fr
+      }
+
+      .testimonial {
+        padding: 28px 20px
+      }
+
+      /* Scarcity */
+      .scarcity-band {
+        font-size: .68rem;
+        padding: 10px 14px
+      }
+
+      /* Offer */
+      .offer-box {
+        padding: 28px 18px
+      }
+
+      .offer-price-main {
+        font-size: 3rem
+      }
+
+      .offer-price-main span.cents {
+        font-size: 1.5rem
+      }
+
+      .countdown-num {
+        font-size: 1.6rem;
+        min-width: 44px
+      }
+
+      /* Guarantee */
+      .guarantee-box {
+        padding: 28px 20px
+      }
+
+      /* FAQ */
+      .faq-q {
+        font-size: .88rem
+      }
+
+      .faq-a {
+        font-size: .88rem
+      }
+
+      /* Lead modal */
       .lead-modal {
-        padding: 36px 28px
+        padding: 28px 20px
       }
 
+      /* Footer */
       .footer-links {
-        gap: 24px;
+        gap: 16px;
         flex-direction: column
       }
 
       .footer-cta {
-        font-size: 1.15rem;
-        padding: 0 24px
+        font-size: 1.05rem;
+        padding: 0 18px
       }
     }
   </style>
