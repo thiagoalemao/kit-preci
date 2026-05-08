@@ -3566,6 +3566,10 @@
             <option value="Veterinário Autônomo">Veterinário Autônomo</option>
           </select>
         </div>
+        <div class="lead-field" id="lead-empresa-wrap" style="display:none">
+          <label for="lead-empresa">Nome da clínica / hospital</label>
+          <input type="text" id="lead-empresa" name="empresa" placeholder="Ex: Clínica VetSaúde" autocomplete="organization">
+        </div>
         <div class="lead-field">
           <label for="lead-email">E-mail</label>
           <input type="email" id="lead-email" name="email" required placeholder="seu@email.com" autocomplete="email">
@@ -3628,6 +3632,20 @@
     });
 
     // Phone mask
+    document.getElementById('lead-cargo').addEventListener('change', function () {
+      const wrap = document.getElementById('lead-empresa-wrap');
+      const input = document.getElementById('lead-empresa');
+      if (this.value === 'Veterinário Gestor') {
+        wrap.style.display = '';
+        input.required = true;
+      } else {
+        wrap.style.display = 'none';
+        input.required = false;
+        input.value = '';
+        input.classList.remove('error');
+      }
+    });
+
     document.getElementById('lead-tel').addEventListener('input', function () {
       let v = this.value.replace(/\D/g, '').slice(0, 11);
       if (v.length > 10) v = v.replace(/^(\d{2})(\d{5})(\d{4})$/, '($1) $2-$3');
@@ -3642,7 +3660,11 @@
       const btn = this.querySelector('.lead-submit');
 
       let valid = true;
-      ['lead-nome', 'lead-cargo', 'lead-email', 'lead-tel'].forEach(function (id) {
+      const cargoRaw = document.getElementById('lead-cargo').value;
+      const isGestor = cargoRaw === 'Veterinário Gestor';
+      const fieldsToValidate = ['lead-nome', 'lead-cargo', 'lead-email', 'lead-tel'];
+      if (isGestor) fieldsToValidate.push('lead-empresa');
+      fieldsToValidate.forEach(function (id) {
         const el = document.getElementById(id);
         el.classList.remove('error');
         if (!el.value.trim()) { el.classList.add('error'); valid = false; }
@@ -3652,15 +3674,15 @@
       btn.disabled = true;
       btn.textContent = 'Enviando...';
 
-      const cargoRaw = document.getElementById('lead-cargo').value;
-      const perfil = cargoRaw === 'Veterinário Gestor' ? 'gestor' : 'autonomo';
+      const perfil = isGestor ? 'gestor' : 'autonomo';
+      const empresa = isGestor ? document.getElementById('lead-empresa').value.trim() : undefined;
       const payload = {
         name: document.getElementById('lead-nome').value.trim(),
         email: document.getElementById('lead-email').value.trim(),
         phone: document.getElementById('lead-tel').value.trim(),
         perfil,
         source: 'kit',
-        custom: { timestamp: new Date().toISOString() }
+        custom: { ...(empresa && { empresa }), timestamp: new Date().toISOString() }
       };
 
       try {
