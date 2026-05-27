@@ -9,8 +9,8 @@
       "destination": "https://diagnostico.thiagoalemaovet.com.br/:path*"
     },
     {
-      "source": "/crm/:path*",
-      "destination": "https://crm.thiagoalemaovet.com.br/:path*"
+      "source": "/bio/:path*",
+      "destination": "https://bio.thiagoalemaovet.com.br/:path*"
     }
   ]
 }
