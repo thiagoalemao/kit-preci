@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '10063049177094471');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=10063049177094471&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Diagnóstico da Clínica Lucrativa</title>
+<meta name="description" content="Sete eixos, vinte e uma perguntas. Descubra onde a sua clínica está perdendo dinheiro.">
+<meta name="theme-color" content="#0B0F1B">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* Paleta extraída da identidade MIV */
+  --navy:#0B0F1B;          /* navy profundo da capa */
+  --navy-2:#223748;        /* slate navy do degradê */
+  --navy-3:#2E4657;
+  --gold:#C9A46F;          /* dourado da marca */
+  --gold-lt:#DCC099;
+  --gold-dk:#A8814D;
+  --paper:#FAF6F4;         /* off-white quente dos slides */
+  --paper-2:#EFE7E2;
+  --sand:#E6D6CB;          /* areia do degradê interno */
+  --ink:#0B0F1B;
+  --ink-2:#3A444F;
+  --muted:#7C848E;
+  --line:rgba(11,15,27,.13);
+  --cond:"Oswald","Roboto Condensed","Avenir Next Condensed","Helvetica Neue Condensed",
+         "Arial Narrow",system-ui,sans-serif;
+  --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{background:var(--navy);color:var(--ink);font-family:var(--sans);
+  font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased}
+.wrap{max-width:560px;margin:0 auto;min-height:100vh;
+  background:var(--paper);
+  background-image:radial-gradient(120% 55% at 60% 22%, var(--sand) 0%, rgba(230,214,203,0) 62%);
+  box-shadow:0 0 60px rgba(0,0,0,.4);display:flex;flex-direction:column}
+.pad{padding:26px 22px}
+@media(min-width:520px){.pad{padding:34px 34px}}
+
+/* display condensado da marca */
+.disp{font-family:var(--cond);font-weight:700;letter-spacing:-.005em;line-height:1.08}
+.numk{font-family:var(--cond);font-weight:700;transform:skewX(-9deg);display:inline-block;color:var(--gold)}
+
+.eyebrow{font-family:var(--cond);font-size:11px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--gold);font-weight:600;margin:0 0 14px}
+.eyebrow.dark{color:var(--gold-dk)}
+
+/* ---------- capa ---------- */
+#capa{color:var(--paper);flex:1;display:flex;flex-direction:column;justify-content:center;
+  background:var(--navy);
+  background-image:radial-gradient(115% 70% at 50% 30%, var(--navy-3) 0%, var(--navy-2) 38%, var(--navy) 78%)}
+#capa h1{font-family:var(--cond);font-weight:700;font-size:42px;line-height:1.03;margin:0 0 16px;
+  text-transform:uppercase;letter-spacing:.005em}
+#capa h1 em{font-style:normal;color:var(--gold);display:block}
+#capa p{color:rgba(250,246,244,.76);font-size:15.5px;margin:0 0 22px}
+.meta{display:flex;border-top:1px solid rgba(201,164,111,.3);
+  border-bottom:1px solid rgba(201,164,111,.3);margin:4px 0 26px}
+.meta div{flex:1;padding:14px 8px 14px 0}
+.meta div+div{padding-left:16px;border-left:1px solid rgba(201,164,111,.3)}
+.meta b{display:block;font-family:var(--cond);font-size:30px;color:var(--gold);font-weight:700;line-height:1}
+.meta span{font-family:var(--cond);font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(250,246,244,.5)}
+.privacy{font-size:12.5px;padding-top:6px;color:rgba(250,246,244,.5);margin:20px 0 0;line-height:1.45}
+
+/* ---------- botões ---------- */
+.btn{display:block;width:100%;border:0;cursor:pointer;font-family:var(--cond);
+  font-size:17px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  padding:17px 18px;border-radius:2px;text-align:center;text-decoration:none;
+  transition:transform .12s ease,background .12s ease}
+.btn:active{transform:scale(.985)}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:var(--gold-lt)}
+.btn-ghost{background:transparent;color:var(--navy);border:1px solid var(--line);font-weight:600}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+/* ---------- quiz ---------- */
+#quiz{display:none;flex:1;flex-direction:column}
+.topbar{padding:16px 22px 0}
+.progress{height:3px;background:var(--paper-2);border-radius:2px;overflow:hidden}
+.progress i{display:block;height:100%;width:0;background:var(--gold);
+  transition:width .3s cubic-bezier(.4,0,.2,1)}
+.counter{display:flex;justify-content:space-between;align-items:baseline;margin-top:11px}
+.counter .n{font-family:var(--cond);font-weight:600;font-size:15px;letter-spacing:.06em;color:var(--gold-dk)}
+.counter .ax{font-family:var(--cond);font-size:11.5px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--ink-2);font-weight:600}
+.qbody{flex:1;display:flex;flex-direction:column;justify-content:center;padding:22px}
+.q{font-family:var(--cond);font-weight:700;font-size:29px;line-height:1.16;margin:0 0 26px;color:var(--ink)}
+@media(max-width:380px){.q{font-size:25px}}
+.opts{display:flex;flex-direction:column;gap:9px}
+.opt{display:flex;align-items:center;gap:13px;width:100%;background:#fff;border:1px solid var(--line);
+  border-radius:2px;padding:15px;font-size:15.5px;font-family:var(--sans);color:var(--ink);
+  cursor:pointer;text-align:left;transition:border-color .12s,background .12s}
+.opt:hover{border-color:var(--navy-2)}
+.opt:active{background:var(--paper-2)}
+.opt:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.opt .dot{width:11px;height:11px;border-radius:50%;border:1.5px solid var(--line);flex:0 0 auto}
+.opt.sel{border-color:var(--navy)}
+.opt.sel .dot{background:var(--gold);border-color:var(--gold)}
+.navrow{padding:0 22px 26px}
+.back{background:none;border:0;color:var(--muted);font-size:14px;cursor:pointer;padding:8px 0;
+  font-family:var(--sans)}
+.back:disabled{opacity:.3;cursor:default}
+
+/* ---------- laudo ---------- */
+#laudo{display:none;flex:1}
+.score-block{color:var(--paper);padding:32px 22px 28px;text-align:center;
+  background:var(--navy);
+  background-image:radial-gradient(110% 80% at 50% 24%, var(--navy-3) 0%, var(--navy-2) 42%, var(--navy) 82%)}
+.score-num{font-family:var(--cond);font-weight:700;font-size:86px;line-height:.86;color:var(--gold)}
+.score-num small{font-size:26px;color:rgba(250,246,244,.42)}
+.faixa{font-family:var(--cond);font-size:13px;letter-spacing:.2em;text-transform:uppercase;font-weight:600;
+  margin-top:16px;display:inline-block;padding:8px 15px;border:1px solid var(--gold);
+  border-radius:2px;color:var(--gold)}
+.faixa-desc{color:rgba(250,246,244,.8);font-size:15px;margin:16px auto 0;max-width:400px}
+
+.exam-head{display:flex;justify-content:space-between;font-family:var(--cond);font-size:11.5px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding-bottom:9px;
+  border-bottom:1px solid var(--line)}
+.row{padding:15px 0;border-bottom:1px solid var(--line)}
+.row-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.row-name{font-family:var(--cond);font-weight:600;font-size:18px;text-transform:uppercase;
+  letter-spacing:.04em}
+.row-val{font-family:var(--cond);font-weight:700;font-size:21px;white-space:nowrap;color:var(--navy-2)}
+.row-val.alt{color:var(--gold-dk)}
+.bar{position:relative;height:7px;background:var(--paper-2);border-radius:1px;margin-top:10px}
+.bar i{position:absolute;left:0;top:0;height:100%;background:var(--navy-2);border-radius:1px;
+  width:0;transition:width .7s cubic-bezier(.22,1,.36,1)}
+.bar i.alt{background:var(--gold)}
+.bar .ref{position:absolute;top:-4px;bottom:-4px;left:70%;width:1px;background:var(--navy);opacity:.5}
+.tag{display:inline-block;font-family:var(--cond);font-size:11px;letter-spacing:.18em;
+  text-transform:uppercase;font-weight:600;color:var(--gold-dk);border:1px solid var(--gold);
+  border-radius:2px;padding:2px 7px;margin-top:9px}
+.refnote{font-size:12.5px;color:var(--muted);margin-top:12px}
+
+.focus-card{background:#fff;border-left:3px solid var(--gold);padding:20px}
+.focus-card h3{font-family:var(--cond);font-weight:700;font-size:24px;margin:2px 0 0;
+  text-transform:uppercase;letter-spacing:.02em}
+.focus-card .lbl{font-family:var(--cond);font-weight:600;font-size:13px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--gold-dk)}
+.focus-card p{margin:9px 0 0;font-size:15px;color:var(--ink-2)}
+.focus-card+.focus-card{margin-top:12px}
+
+.cta-block{color:var(--paper);padding:32px 22px 34px;
+  background:var(--navy);
+  background-image:radial-gradient(120% 75% at 50% 18%, var(--navy-3) 0%, var(--navy-2) 40%, var(--navy) 80%)}
+.cta-block h2{font-family:var(--cond);font-weight:700;font-size:30px;line-height:1.08;margin:0 0 14px;
+  text-transform:uppercase}
+.cta-block h2 em{font-style:normal;color:var(--gold);display:block}
+.cta-block p{color:rgba(250,246,244,.78);font-size:15px;margin:0 0 14px}
+.when{display:flex;align-items:baseline;gap:10px;font-family:var(--cond);font-weight:700;font-size:24px;
+  color:var(--gold);border-top:1px solid rgba(201,164,111,.3);
+  border-bottom:1px solid rgba(201,164,111,.3);padding:14px 0;margin:0 0 20px}
+.when span{font-weight:600;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(250,246,244,.5)}
+.small{font-size:12.5px;color:rgba(250,246,244,.5);margin-top:16px;line-height:1.5}
+.copied{display:block;text-align:center;font-size:13px;color:var(--gold);margin-top:11px;height:16px}
+.foot{font-family:var(--cond);letter-spacing:.2em;text-transform:uppercase;padding:22px 22px 30px;
+  text-align:center;font-size:11.5px;color:var(--muted)}
+
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- ============ CAPA ============ -->
+  <section id="capa" class="pad">
+    <p class="eyebrow">Thiago Alemão · Gestão Veterinária</p>
+    <h1>Diagnóstico da <em>Clínica Lucrativa</em></h1>
+    <p>Sete eixos. Vinte e uma perguntas. No final você recebe um laudo com os dois pontos que mais estão drenando dinheiro da sua clínica hoje.</p>
+    <div class="meta">
+      <div><b>21</b><span>perguntas</span></div>
+      <div><b>3</b><span>minutos</span></div>
+      <div><b>7</b><span>eixos</span></div>
+    </div>
+    <button class="btn btn-gold" id="start">Começar o diagnóstico</button>
+    <p class="privacy">Responda com honestidade: o laudo só é útil se as notas forem reais. Nada do que você marcar sai deste aparelho: não há envio, cadastro nem armazenamento.</p>
+  </section>
+
+  <!-- ============ QUIZ ============ -->
+  <section id="quiz">
+    <div class="topbar">
+      <div class="progress"><i id="bar"></i></div>
+      <div class="counter">
+        <span class="n" id="cnt">01 / 21</span>
+        <span class="ax" id="axname">Financeiro</span>
+      </div>
+    </div>
+    <div class="qbody">
+      <p class="q" id="qtext"></p>
+      <div class="opts" id="opts"></div>
+    </div>
+    <div class="navrow"><button class="back" id="back" disabled>← Voltar</button></div>
+  </section>
+
+  <!-- ============ LAUDO ============ -->
+  <section id="laudo">
+    <div class="score-block">
+      <p class="eyebrow" style="color:rgba(250,246,244,.45)">Resultado geral</p>
+      <div class="score-num"><span id="total">0</span><small>/70</small></div>
+      <div class="faixa" id="faixa"></div>
+      <p class="faixa-desc" id="faixaDesc"></p>
+    </div>
+
+    <div class="pad">
+      <p class="eyebrow dark">Laudo por eixo</p>
+      <div class="exam">
+        <div class="exam-head"><span>Eixo</span><span>Nota · referência 7,0</span></div>
+        <div id="rows"></div>
+      </div>
+      <p class="refnote">Referência de 7,0 é o piso a partir do qual o eixo deixa de consumir lucro. Abaixo disso, ele está drenando resultado todo mês.</p>
+    </div>
+
+    <div class="pad" style="padding-top:0">
+      <p class="eyebrow dark">Seus dois maiores vazamentos</p>
+      <div id="focos"></div>
+    </div>
+
+    <div class="cta-block">
+      <p class="eyebrow" style="color:rgba(250,246,244,.45)">Aula ao vivo</p>
+      <h2>Agora você sabe onde está vazando. <em>Falta saber como fechar.</em></h2>
+      <p>Na quinta a gente destrincha os cinco vazamentos que aparecem em toda clínica veterinária e o que fazer com cada um deles. Leve seus dois eixos mais fracos para a aula.</p>
+      <div class="when">06.08 · 19h30 <span>ao vivo · Google Meet</span></div>
+      <p style="font-size:14.5px">A condição de inauguração da Mentoria Imersiva Veterinária será apresentada apenas ao vivo. Ela não estará na gravação.</p>
+      <a class="btn btn-gold" id="ctaAula" href="#" style="margin-top:6px">Confirmar minha presença</a>
+      <button class="btn btn-ghost" id="copy" style="margin-top:10px;background:rgba(250,246,244,.06);color:var(--paper);border-color:rgba(201,164,111,.35)">Copiar meu resultado</button>
+      <span class="copied" id="copied"></span>
+      <p class="small">Cole o resultado no grupo se quiser comparar com outros gestores. Você também pode tirar um print desta tela. Ela não fica salva depois que você fechar.</p>
+    </div>
+
+    <div class="foot">Thiago Alemão · Gestão Empresarial Veterinária</div>
+  </section>
+
+</div>
+
+<script>
+/* =========================================================
+   CONFIGURAÇÃO
+   ========================================================= */
+var CONFIG = {
+  LINK_GRUPO: "https://chat.whatsapp.com/IuThz0tf9zJI0mGjw9cSDD"
+};
+/* ========================================================= */
+
+var EIXOS = [
+  {n:"Financeiro", q:[
+    "Sei exatamente quanto sobrou de lucro na clínica no mês passado.",
+    "A conta da clínica e a minha conta pessoal são separadas de verdade.",
+    "Consigo prever quanto vai entrar na conta da clínica nos próximos 30 dias."
+  ], diag:"Sem número de lucro e sem previsão de entrada, toda decisão da clínica vira aposta. É aqui que nasce a sensação de faturar bem e nunca sobrar."},
+
+  {n:"Precificação", q:[
+    "Sei quanto sobra para a clínica em uma consulta, depois de todos os custos.",
+    "Meus preços saíram do meu custo, não do preço do concorrente da esquina.",
+    "Reviso a tabela de preços em uma frequência definida, não só quando aperta."
+  ], diag:"Preço formado por comparação é palpite com nota fiscal. Com margem errada, quanto mais você atende, mais rápido o dinheiro some."},
+
+  {n:"Pessoas", q:[
+    "Minha equipe sabe o que fazer sem precisar me perguntar.",
+    "Tenho critério claro para contratar, treinar e desligar alguém.",
+    "Dou feedback em momentos definidos, não só quando algo dá errado."
+  ], diag:"Equipe sem critério e sem feedback devolve tudo para o dono. O custo aparece disfarçado: retrabalho, rotatividade e horas suas em tarefa que não exige você."},
+
+  {n:"Marketing", q:[
+    "Sei quantos clientes novos chegaram no mês passado e por qual caminho.",
+    "Acompanho os orçamentos que não foram aprovados e o motivo.",
+    "Tenho ação organizada para o cliente voltar: retorno, pacote ou recorrência."
+  ], diag:"Orçamento recusado sem acompanhamento é receita que já estava na porta e foi embora. Sem retenção, você paga caro para repor cliente que já era seu."},
+
+  {n:"Processos", q:[
+    "As rotinas da clínica estão escritas, não só na cabeça das pessoas.",
+    "Meu estoque tem controle e eu sei quanto de dinheiro está parado nele.",
+    "A recepção segue um roteiro definido no atendimento e no WhatsApp."
+  ], diag:"Rotina que só existe na memória da equipe some junto com a equipe. E estoque sem controle é dinheiro que você emprestou para si mesmo e esqueceu de cobrar."},
+
+  {n:"Indicadores", q:[
+    "Acompanho ticket médio e margem todo mês.",
+    "Tenho um DRE ou relatório gerencial que eu realmente olho.",
+    "Minhas decisões partem de números, não de sensação."
+  ], diag:"Sem indicador, o gestor decide por sensação. Em clínica, a sensação é enviesada pelo volume de atendimento: agenda cheia parece resultado mesmo quando não é."},
+
+  {n:"Liderança", q:[
+    "Se eu ficar 30 dias fora, a clínica continua funcionando bem.",
+    "Tenho metas definidas para a clínica neste ano.",
+    "Consigo trabalhar no negócio, e não só dentro do atendimento."
+  ], diag:"Se a clínica não anda sem você, você não tem uma empresa: tem um emprego que também dá prejuízo quando você adoece. É o vazamento que limita todos os outros."}
+];
+
+var ESCALA = [
+  {t:"Nunca", v:0},
+  {t:"Raramente", v:2.5},
+  {t:"Às vezes", v:5},
+  {t:"Quase sempre", v:7.5},
+  {t:"Sempre", v:10}
+];
+
+var FAIXAS = [
+  {min:0,  max:24, nome:"Zona crítica",
+   desc:"A clínica está sendo conduzida no improviso. Não é falta de competência técnica, é ausência de estrutura de gestão. O bom disso: os primeiros ajustes costumam ter o maior retorno."},
+  {min:25, max:41, nome:"Sobrevivência",
+   desc:"A clínica funciona, mas depende de esforço constante seu para não desandar. Cresce faturamento sem crescer lucro. É o estágio mais comum e o mais cansativo."},
+  {min:42, max:55, nome:"Em organização",
+   desc:"Há base construída. O que falta é consistência e indicador: você já faz várias coisas certas, mas de forma irregular, e por isso o resultado oscila."},
+  {min:56, max:70, nome:"Estruturada",
+   desc:"A operação está organizada. Neste estágio o ganho não vem de arrumar a casa, e sim de escala, margem fina e decisão estratégica."}
+];
+
+var flat = [];
+EIXOS.forEach(function(e, ei){ e.q.forEach(function(q, qi){ flat.push({ax:ei, txt:q, key:ei+"-"+qi}); }); });
+
+var idx = 0, resp = {};
+var $ = function(id){ return document.getElementById(id); };
+
+function show(el){ ["capa","quiz","laudo"].forEach(function(s){ $(s).style.display = "none"; });
+  $(el).style.display = (el === "capa") ? "flex" : (el === "quiz" ? "flex" : "block");
+  window.scrollTo(0,0); }
+
+$("start").addEventListener("click", function(){ show("quiz"); render(); });
+$("ctaAula").addEventListener("click", function(){ if (window.fbq) fbq('track','Lead'); });
+
+function render(){
+  var item = flat[idx];
+  $("qtext").textContent = item.txt;
+  $("axname").textContent = EIXOS[item.ax].n;
+  $("cnt").textContent = ("0"+(idx+1)).slice(-2) + " / 21";
+  $("bar").style.width = ((idx)/21*100) + "%";
+  $("back").disabled = (idx === 0);
+  var box = $("opts"); box.innerHTML = "";
+  ESCALA.forEach(function(o){
+    var b = document.createElement("button");
+    b.className = "opt" + (resp[item.key] === o.v ? " sel" : "");
+    b.type = "button";
+    b.innerHTML = '<span class="dot"></span><span>' + o.t + '</span>';
+    b.addEventListener("click", function(){
+      resp[item.key] = o.v;
+      if (idx < 20){ idx++; render(); } else { $("bar").style.width = "100%"; finish(); }
+    });
+    box.appendChild(b);
+  });
+}
+
+$("back").addEventListener("click", function(){ if (idx > 0){ idx--; render(); } });
+
+var resultado = null;
+
+function finish(){
+  var eixos = EIXOS.map(function(e, ei){
+    var s = 0; for (var i=0;i<3;i++){ s += (resp[ei+"-"+i] || 0); }
+    return { nome:e.n, nota: s/3, diag:e.diag };
+  });
+  var total = eixos.reduce(function(a,b){ return a + b.nota; }, 0);
+  var ordenados = eixos.slice().sort(function(a,b){ return a.nota - b.nota; });
+  var fracos = [ordenados[0].nome, ordenados[1].nome];
+  var faixa = FAIXAS.filter(function(f){ return total >= f.min && total <= f.max; })[0];
+  resultado = { total:total, faixa:faixa, eixos:eixos, fracos:fracos };
+
+  $("total").textContent = fmt(total);
+  $("faixa").textContent = faixa.nome;
+  $("faixaDesc").textContent = faixa.desc;
+
+  var rows = $("rows"); rows.innerHTML = "";
+  eixos.forEach(function(e){
+    var alt = e.nota < 7;
+    var d = document.createElement("div");
+    d.className = "row";
+    d.innerHTML =
+      '<div class="row-top"><span class="row-name">' + e.nome + '</span>' +
+      '<span class="row-val ' + (alt ? "alt" : "ok") + '">' + fmt(e.nota) + '</span></div>' +
+      '<div class="bar"><i class="' + (alt ? "alt" : "") + '"></i><span class="ref"></span></div>' +
+      (alt ? '<span class="tag">Alterado</span>' : '');
+    rows.appendChild(d);
+    var fill = d.querySelector(".bar i");
+    setTimeout(function(){ fill.style.width = (e.nota*10) + "%"; }, 90);
+  });
+
+  var fc = $("focos"); fc.innerHTML = "";
+  ordenados.slice(0,2).forEach(function(e, i){
+    var c = document.createElement("div");
+    c.className = "focus-card";
+    c.innerHTML = '<span class="lbl">Prioridade ' + (i+1) + '</span>' +
+      '<h3>' + e.nome + ' · ' + fmt(e.nota) + '</h3><p>' + e.diag + '</p>';
+    fc.appendChild(c);
+  });
+
+  $("ctaAula").href = CONFIG.LINK_GRUPO;
+  show("laudo");
+}
+
+function fmt(n){ return n.toFixed(1).replace(".", ","); }
+
+$("copy").addEventListener("click", function(){
+  if (!resultado) return;
+  var linhas = resultado.eixos.map(function(e){ return e.nome + ": " + fmt(e.nota); }).join("\n");
+  var txt = "Diagnóstico da Clínica Lucrativa\n" +
+            "Resultado: " + fmt(resultado.total) + "/70 · " + resultado.faixa.nome + "\n\n" +
+            linhas + "\n\n" +
+            "Meus dois maiores vazamentos: " + resultado.fracos[0] + " e " + resultado.fracos[1] + ".\n" +
+            "Aula ao vivo 06.08 às 19h30.";
+  var done = function(){ $("copied").textContent = "Resultado copiado. Agora é só colar no grupo."; };
+  if (navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(done, function(){ fallback(txt, done); });
+  } else { fallback(txt, done); }
+});
+
+function fallback(txt, done){
+  var ta = document.createElement("textarea");
+  ta.value = txt; ta.setAttribute("readonly","");
+  ta.style.position = "fixed"; ta.style.top = "-1000px";
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand("copy"); done(); }
+  catch(e){ $("copied").textContent = "Não deu para copiar. Tire um print da tela."; }
+  document.body.removeChild(ta);
+}
+</script>
+</body>
+</html>
