@@ -85,13 +85,30 @@ body{background:var(--navy);color:var(--ink);font-family:var(--sans);
 /* ---------- botões ---------- */
 .btn{display:block;width:100%;border:0;cursor:pointer;font-family:var(--cond);
   font-size:17px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
-  padding:17px 18px;border-radius:2px;text-align:center;text-decoration:none;
+  padding:17px 18px;border-radius:2px;text-align:center;text-decoration:none;line-height:1.24;
   transition:transform .12s ease,background .12s ease}
 .btn:active{transform:scale(.985)}
 .btn-gold{background:var(--gold);color:var(--navy)}
 .btn-gold:hover{background:var(--gold-lt)}
 .btn-ghost{background:transparent;color:var(--navy);border:1px solid var(--line);font-weight:600}
 .btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+/* CTA principal do laudo: precisa ganhar de tudo que está em volta */
+.btn-zap{display:flex;align-items:center;justify-content:center;gap:12px;
+  font-size:18.5px;padding:20px 18px;
+  box-shadow:0 10px 26px rgba(0,0,0,.4), 0 0 24px rgba(201,164,111,.26);
+  animation:pulsoZap 2.8s ease-out infinite}
+.btn-zap svg{width:23px;height:23px;flex:0 0 auto}
+.btn-zap:hover{background:var(--gold-lt);
+  box-shadow:0 10px 30px rgba(0,0,0,.45), 0 0 34px rgba(201,164,111,.42)}
+@media(max-width:380px){.btn-zap{font-size:17px;gap:10px}}
+
+/* anel dourado que abre e some, chamando o olho sem piscar */
+@keyframes pulsoZap{
+  0%  {box-shadow:0 10px 26px rgba(0,0,0,.4), 0 0 24px rgba(201,164,111,.26), 0 0 0 0 rgba(201,164,111,.5)}
+  70% {box-shadow:0 10px 26px rgba(0,0,0,.4), 0 0 24px rgba(201,164,111,.26), 0 0 0 15px rgba(201,164,111,0)}
+  100%{box-shadow:0 10px 26px rgba(0,0,0,.4), 0 0 24px rgba(201,164,111,.26), 0 0 0 0 rgba(201,164,111,0)}
+}
 
 /* ---------- quiz ---------- */
 #quiz{display:none;flex:1;flex-direction:column}
@@ -167,13 +184,56 @@ body{background:var(--navy);color:var(--ink);font-family:var(--sans);
   text-transform:uppercase}
 .cta-block h2 em{font-style:normal;color:var(--gold);display:block}
 .cta-block p{color:rgba(250,246,244,.78);font-size:15px;margin:0 0 14px}
-.when{display:flex;align-items:baseline;gap:10px;font-family:var(--cond);font-weight:700;font-size:24px;
+.when{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 10px;font-family:var(--cond);
+  font-weight:700;font-size:23px;text-transform:uppercase;
   color:var(--gold);border-top:1px solid rgba(201,164,111,.3);
   border-bottom:1px solid rgba(201,164,111,.3);padding:14px 0;margin:0 0 20px}
+@media(max-width:380px){.when{font-size:20px}}
 .when span{font-weight:600;font-size:11.5px;letter-spacing:.18em;text-transform:uppercase;
   color:rgba(250,246,244,.5)}
 .small{font-size:12.5px;color:rgba(250,246,244,.5);margin-top:16px;line-height:1.5}
-.copied{display:block;text-align:center;font-size:13px;color:var(--gold);margin-top:11px;height:16px}
+
+/* linha de urgência: ligada/desligada por CONFIG.URGENCIA */
+.urgencia{font-family:var(--cond);font-weight:600;font-size:13px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--gold);margin:16px 0 0;
+  border-left:2px solid var(--gold);padding-left:11px;line-height:1.35}
+
+/* saída secundária: texto, não botão, para não competir com o CTA */
+.link-sec{display:block;width:100%;margin:15px auto 0;padding:8px;background:none;border:0;
+  cursor:pointer;font-family:var(--sans);font-size:14.5px;color:rgba(250,246,244,.6);
+  text-align:center;text-decoration:underline;text-underline-offset:3px}
+.link-sec:hover{color:var(--paper)}
+.link-sec:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.copied{display:block;text-align:center;font-size:13px;color:var(--gold);margin-top:11px;min-height:16px}
+
+/* campo de nome no CTA */
+.namebox{margin:0 0 12px}
+.namebox label{display:block;font-family:var(--cond);font-weight:600;font-size:11.5px;
+  letter-spacing:.18em;text-transform:uppercase;color:rgba(250,246,244,.5);margin:0 0 8px}
+.namebox input{width:100%;background:rgba(250,246,244,.06);border:1px solid rgba(201,164,111,.35);
+  border-radius:2px;padding:15px;color:var(--paper);font-family:var(--sans);
+  font-size:16px;line-height:1.2} /* 16px evita o zoom automático do iOS */
+.namebox input::placeholder{color:rgba(250,246,244,.34)}
+.namebox input:focus{outline:none;border-color:var(--gold);background:rgba(250,246,244,.1)}
+.namebox select{width:100%;background:rgba(250,246,244,.06);border:1px solid rgba(201,164,111,.35);
+  border-radius:2px;padding:15px;color:var(--paper);font-family:var(--sans);font-size:16px;
+  -webkit-appearance:none;appearance:none;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 8'><path fill='none' stroke='%23C9A46F' stroke-width='1.8' d='M1 1.5l5 5 5-5'/></svg>");
+  background-repeat:no-repeat;background-position:right 15px center;background-size:12px}
+.namebox select:focus{outline:none;border-color:var(--gold)}
+.namebox select option{color:#0B0F1B;background:#fff}
+.namebox input.bad,.namebox select.bad{border-color:#E8A0A0}
+.err{display:block;font-size:13px;color:#E8A0A0;margin-top:7px}
+
+/* ---------- formulário de entrada ---------- */
+#form{display:none;color:var(--paper);flex:1;flex-direction:column;justify-content:center;
+  background:var(--navy);
+  background-image:radial-gradient(115% 70% at 50% 30%, var(--navy-3) 0%, var(--navy-2) 38%, var(--navy) 78%)}
+#form h2{font-family:var(--cond);font-weight:700;font-size:33px;line-height:1.06;margin:0 0 12px;
+  text-transform:uppercase;letter-spacing:.005em}
+#form h2 em{font-style:normal;color:var(--gold);display:block}
+#form .sub{color:rgba(250,246,244,.74);font-size:15px;margin:0 0 24px}
+@media(max-width:380px){#form h2{font-size:29px}}
 .foot{font-family:var(--cond);letter-spacing:.2em;text-transform:uppercase;padding:22px 22px 30px;
   text-align:center;font-size:11.5px;color:var(--muted)}
 
@@ -194,7 +254,43 @@ body{background:var(--navy);color:var(--ink);font-family:var(--sans);
       <div><b>7</b><span>eixos</span></div>
     </div>
     <button class="btn btn-gold" id="start">Começar o diagnóstico</button>
-    <p class="privacy">Responda com honestidade: o laudo só é útil se as notas forem reais. Nada do que você marcar sai deste aparelho: não há envio, cadastro nem armazenamento.</p>
+    <p class="privacy">Responda com honestidade: o laudo só é útil se as notas forem reais. São três minutos e o resultado aparece na hora, na própria tela.</p>
+  </section>
+
+  <!-- ============ FORMULÁRIO ============ -->
+  <section id="form" class="pad">
+    <p class="eyebrow">Antes de começar</p>
+    <h2>Só preciso saber <em>com quem estou falando</em></h2>
+    <p class="sub">A leitura do seu laudo acontece no WhatsApp, com a equipe do Thiago. Por isso o contato vem antes das perguntas.</p>
+
+    <div class="namebox">
+      <label for="fNome">Seu nome</label>
+      <input type="text" id="fNome" placeholder="Nome e sobrenome"
+             autocomplete="name" autocapitalize="words" maxlength="60">
+      <span class="err" id="eNome"></span>
+    </div>
+
+    <div class="namebox">
+      <label for="fZap">Seu WhatsApp</label>
+      <input type="tel" id="fZap" placeholder="(79) 98172-6045"
+             autocomplete="tel" inputmode="numeric" maxlength="16">
+      <span class="err" id="eZap"></span>
+    </div>
+
+    <div class="namebox">
+      <label for="fPerfil">Seu papel na clínica</label>
+      <select id="fPerfil">
+        <option value="">Selecione</option>
+        <option>Sou dono(a) ou sócio(a)</option>
+        <option>Sou gestor(a) contratado(a)</option>
+        <option>Sou veterinário(a) da equipe</option>
+        <option>Ainda não tenho clínica</option>
+      </select>
+      <span class="err" id="ePerfil"></span>
+    </div>
+
+    <button class="btn btn-gold" id="goQuiz" style="margin-top:6px">Começar as 21 perguntas</button>
+    <p class="privacy">Seus dados vão apenas para a equipe do Thiago Alemão, para a leitura do seu laudo. Sem disparo em massa e sem repasse para terceiros.</p>
   </section>
 
   <!-- ============ QUIZ ============ -->
@@ -237,15 +333,21 @@ body{background:var(--navy);color:var(--ink);font-family:var(--sans);
     </div>
 
     <div class="cta-block">
-      <p class="eyebrow" style="color:rgba(250,246,244,.45)">Aula ao vivo</p>
-      <h2>Agora você sabe onde está vazando. <em>Falta saber como fechar.</em></h2>
-      <p>Na quinta a gente destrincha os cinco vazamentos que aparecem em toda clínica veterinária e o que fazer com cada um deles. Leve seus dois eixos mais fracos para a aula.</p>
-      <div class="when">06.08 · 19h30 <span>ao vivo · Google Meet</span></div>
-      <p style="font-size:14.5px">A condição de inauguração da Mentoria Imersiva Veterinária será apresentada apenas ao vivo. Ela não estará na gravação.</p>
-      <a class="btn btn-gold" id="ctaAula" href="#" style="margin-top:6px">Confirmar minha presença</a>
-      <button class="btn btn-ghost" id="copy" style="margin-top:10px;background:rgba(250,246,244,.06);color:var(--paper);border-color:rgba(201,164,111,.35)">Copiar meu resultado</button>
+      <p class="eyebrow" style="color:rgba(250,246,244,.45)">Leitura do laudo</p>
+      <h2>O laudo mostra onde vaza. <em>A conversa mostra como estancar.</em></h2>
+      <p>Nenhum questionário resolve isso sozinho. Ele só aponta o sintoma. Quem estanca a ferida é sentar em cima dos seus dois eixos mais fracos e olhar, com alguém que entende do assunto, os números reais da sua clínica. É isso que fazemos nessa conversa: abrimos seu laudo eixo por eixo e te dizemos exatamente por onde começar.</p>
+      <div class="when">Conversa 1 a 1 com nossa equipe <span>gratuita · sem compromisso</span></div>
+      <p style="font-size:14.5px">Quem conduz a conversa é a equipe formada junto com o Thiago Alemão. É nela que avaliamos se a Mentoria Imersiva Veterinária é o caminho certo para o momento da sua clínica, ou se o seu caso pede algo mais simples primeiro. Sem empurrar venda: só o diagnóstico certo.</p>
+      <p class="urgencia" id="urgencia">Turma fundadora da MIV: vagas limitadas e fecham em breve.</p>
+
+      <a class="btn btn-gold btn-zap" id="ctaWhats" href="#" target="_blank" rel="noopener"
+         style="margin-top:22px">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        <span>Quero a leitura do meu laudo no WhatsApp</span>
+      </a>
+      <button class="link-sec" id="copy">prefiro só copiar meu resultado por agora</button>
       <span class="copied" id="copied"></span>
-      <p class="small">Cole o resultado no grupo se quiser comparar com outros gestores. Você também pode tirar um print desta tela. Ela não fica salva depois que você fechar.</p>
+      <p class="small">O botão abre o WhatsApp com o seu laudo já escrito na mensagem: você só confere e aperta enviar. Esta tela não fica salva depois que você fechar.</p>
     </div>
 
     <div class="foot">Thiago Alemão · Gestão Empresarial Veterinária</div>
@@ -258,7 +360,22 @@ body{background:var(--navy);color:var(--ink);font-family:var(--sans);
    CONFIGURAÇÃO
    ========================================================= */
 var CONFIG = {
-  LINK_GRUPO: "https://chat.whatsapp.com/IuThz0tf9zJI0mGjw9cSDD"
+  /* Linha "Turma fundadora da MIV: vagas limitadas".
+     Troque para false assim que a turma fechar. Promessa de escassez
+     que continua no ar depois de vencida queima a credibilidade da oferta. */
+  URGENCIA: true,
+
+  /* Número do closer que recebe os laudos: 55 + DDD + número.
+     Informado como (79) 8172-6045; incluído o nono dígito, que é
+     obrigatório em celular brasileiro -> (79) 98172-6045.
+     Se o WhatsApp abrir "número inválido", testar sem o 9:
+     "557981726045"                                            */
+  WHATSAPP_CLOSER: "5579981726045",
+
+  /* Apps Script que grava os leads na planilha
+     "Leads · Diagnóstico Clínica Lucrativa" (implantação v1, 10/08/2026).
+     Se reimplantar do zero, este endereço muda. Veja INSTRUCOES-PLANILHA.md */
+  URL_PLANILHA: "https://script.google.com/macros/s/AKfycbyqK9KhhWL_goI46zNEygOtL2T2neg2c9BdKnmMFuj-KgNZU8L6hwK1hbuKyvwwKxRIDQ/exec"
 };
 /* ========================================================= */
 
@@ -331,12 +448,102 @@ EIXOS.forEach(function(e, ei){ e.q.forEach(function(q, qi){ flat.push({ax:ei, tx
 var idx = 0, resp = {};
 var $ = function(id){ return document.getElementById(id); };
 
-function show(el){ ["capa","quiz","laudo"].forEach(function(s){ $(s).style.display = "none"; });
-  $(el).style.display = (el === "capa") ? "flex" : (el === "quiz" ? "flex" : "block");
+function show(el){ ["capa","form","quiz","laudo"].forEach(function(s){ $(s).style.display = "none"; });
+  $(el).style.display = (el === "laudo") ? "block" : "flex";
   window.scrollTo(0,0); }
 
-$("start").addEventListener("click", function(){ show("quiz"); render(); });
-$("ctaAula").addEventListener("click", function(){ if (window.fbq) fbq('track','Lead'); });
+$("start").addEventListener("click", function(){ show("form"); });
+
+if (!CONFIG.URGENCIA) $("urgencia").style.display = "none";
+
+/* =========================================================
+   FORMULÁRIO DE ENTRADA
+   ========================================================= */
+var lead = null;
+
+function mascaraTel(v){
+  var d = v.replace(/\D/g,"").slice(0,11);
+  if (!d) return "";
+  if (d.length <= 2)  return "(" + d;
+  if (d.length <= 6)  return "(" + d.slice(0,2) + ") " + d.slice(2);
+  if (d.length <= 10) return "(" + d.slice(0,2) + ") " + d.slice(2,6) + "-" + d.slice(6);
+  return "(" + d.slice(0,2) + ") " + d.slice(2,7) + "-" + d.slice(7);
+}
+$("fZap").addEventListener("input", function(){ this.value = mascaraTel(this.value); });
+
+function marcar(campo, alvo, ok, msg){
+  $(campo).className = ok ? "" : "bad";
+  $(alvo).textContent = ok ? "" : msg;
+  return !ok;
+}
+
+$("goQuiz").addEventListener("click", function(){
+  var nome   = $("fNome").value.trim();
+  var zap    = $("fZap").value.replace(/\D/g,"");
+  var perfil = $("fPerfil").value;
+
+  var erro = false;
+  erro = marcar("fNome",  "eNome",  nome.length >= 2, "Como podemos te chamar?") || erro;
+  erro = marcar("fZap",   "eZap",   zap.length === 10 || zap.length === 11,
+                "Coloque DDD + número, com o 9 na frente.") || erro;
+  erro = marcar("fPerfil","ePerfil", !!perfil, "Escolha uma opção.") || erro;
+  if (erro) return;
+
+  lead = { leadId:novoId(), nome:nome, whatsapp:zap, perfil:perfil };
+  enviar({ tipo:"lead", leadId:lead.leadId, nome:nome, whatsapp:zap, perfil:perfil });
+  if (window.fbq) fbq('track','Lead',{content_name:'Diagnostico Clinica Lucrativa'});
+
+  show("quiz"); render();
+});
+
+/* =========================================================
+   ENVIO PARA A PLANILHA (com fila de reenvio)
+   ========================================================= */
+var FILA = "dcl_fila";
+
+function novoId(){ return "L" + Date.now().toString(36) + Math.random().toString(36).slice(2,7); }
+function urlOk(){ return /^https:\/\//.test(CONFIG.URL_PLANILHA); }
+function fila(){ try { return JSON.parse(localStorage.getItem(FILA)) || []; } catch(e){ return []; } }
+function salvarFila(f){ try { localStorage.setItem(FILA, JSON.stringify(f)); } catch(e){} }
+
+/* guarda antes de mandar: se a rede falhar, tenta de novo no próximo evento */
+function enviar(dados){
+  if (!urlOk()) return;
+  dados._k = dados.leadId + ":" + dados.tipo;
+  var f = fila().filter(function(x){ return x._k !== dados._k; });
+  f.push(dados); salvarFila(f);
+  descarregar();
+}
+
+var voando = {};   /* o que já está no ar, para não mandar duas vezes */
+
+function descarregar(){
+  if (!urlOk()) return;
+  fila().forEach(function(p){
+    if (voando[p._k]) return;
+    voando[p._k] = true;
+    fetch(CONFIG.URL_PLANILHA, {
+      method:"POST",
+      /* text/plain evita o preflight de CORS, que o Apps Script não responde */
+      headers:{"Content-Type":"text/plain;charset=utf-8"},
+      body: JSON.stringify(p)
+    }).then(function(){
+      delete voando[p._k];
+      salvarFila(fila().filter(function(x){ return x._k !== p._k; }));
+    })["catch"](function(){ delete voando[p._k]; });
+  });
+}
+
+/* última tentativa quando a aba fecha */
+window.addEventListener("pagehide", function(){
+  if (!urlOk() || !navigator.sendBeacon) return;
+  fila().forEach(function(p){
+    navigator.sendBeacon(CONFIG.URL_PLANILHA,
+      new Blob([JSON.stringify(p)], {type:"text/plain;charset=utf-8"}));
+  });
+});
+
+descarregar();   // reenvia o que ficou preso numa visita anterior
 
 function render(){
   var item = flat[idx];
@@ -402,21 +609,59 @@ function finish(){
     fc.appendChild(c);
   });
 
-  $("ctaAula").href = CONFIG.LINK_GRUPO;
+  atualizaLink();
+  enviar({ tipo:"laudo", leadId: lead ? lead.leadId : novoId(),
+           total: fmt(total), faixa: faixa.nome, vaz1: fracos[0], vaz2: fracos[1],
+           notas: eixos.map(function(e){ return fmt(e.nota); }) });
+  if (window.fbq) fbq('trackCustom','DiagnosticoConcluido',{
+    valor: total, faixa: faixa.nome, vazamentos: fracos.join(" + ")
+  });
   show("laudo");
 }
 
 function fmt(n){ return n.toFixed(1).replace(".", ","); }
 
+/* ---------- laudo -> WhatsApp do closer ---------- */
+
+function textoLaudo(){
+  var nome = lead ? lead.nome : "";
+  var linhas = resultado.eixos.map(function(e){
+    return "• " + e.nome + ": " + fmt(e.nota) + (e.nota < 7 ? "  (alterado)" : "");
+  }).join("\n");
+  return "*Diagnóstico da Clínica Lucrativa*\n\n" +
+    (nome ? "Meu nome é " + nome + ".\n" : "") +
+    "Resultado geral: *" + fmt(resultado.total) + "/70* · " + resultado.faixa.nome + "\n\n" +
+    linhas + "\n\n" +
+    "Meus dois maiores vazamentos: *" + resultado.fracos[0] + "* e *" + resultado.fracos[1] + "*.\n\n" +
+    "Quero destrinchar esse laudo e entender o que atacar primeiro.";
+}
+
+function numeroConfigurado(){
+  var n = String(CONFIG.WHATSAPP_CLOSER).replace(/\D/g, "");
+  return n.length >= 12 ? n : null;   // 55 + DDD + 8 ou 9 dígitos
+}
+
+function atualizaLink(){
+  if (!resultado) return;
+  var n = numeroConfigurado();
+  $("ctaWhats").href = n
+    ? "https://wa.me/" + n + "?text=" + encodeURIComponent(textoLaudo())
+    : "#";
+}
+
+$("ctaWhats").addEventListener("click", function(ev){
+  if (!numeroConfigurado()){
+    ev.preventDefault();
+    $("copied").textContent = "WhatsApp ainda não configurado nesta página.";
+    return;
+  }
+  if (window.fbq) fbq('track','Contact');
+});
+
 $("copy").addEventListener("click", function(){
   if (!resultado) return;
-  var linhas = resultado.eixos.map(function(e){ return e.nome + ": " + fmt(e.nota); }).join("\n");
-  var txt = "Diagnóstico da Clínica Lucrativa\n" +
-            "Resultado: " + fmt(resultado.total) + "/70 · " + resultado.faixa.nome + "\n\n" +
-            linhas + "\n\n" +
-            "Meus dois maiores vazamentos: " + resultado.fracos[0] + " e " + resultado.fracos[1] + ".\n" +
-            "Aula ao vivo 06.08 às 19h30.";
-  var done = function(){ $("copied").textContent = "Resultado copiado. Agora é só colar no grupo."; };
+  var txt = textoLaudo();
+  var done = function(){ $("copied").textContent = "Laudo copiado. É só colar na conversa."; };
   if (navigator.clipboard && navigator.clipboard.writeText){
     navigator.clipboard.writeText(txt).then(done, function(){ fallback(txt, done); });
   } else { fallback(txt, done); }
