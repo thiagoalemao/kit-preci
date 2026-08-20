@@ -273,8 +273,16 @@ body{background:var(--navy);color:var(--ink);font-family:var(--sans);
     <div class="namebox">
       <label for="fZap">Seu WhatsApp</label>
       <input type="tel" id="fZap" placeholder="(79) 98172-6045"
-             autocomplete="tel" inputmode="numeric" maxlength="16">
+             autocomplete="tel" inputmode="numeric" maxlength="24">
       <span class="err" id="eZap"></span>
+    </div>
+
+    <div class="namebox">
+      <label for="fMail">Seu e-mail</label>
+      <input type="email" id="fMail" placeholder="voce@suaclinica.com.br"
+             autocomplete="email" autocapitalize="off" autocorrect="off"
+             spellcheck="false" inputmode="email" maxlength="80">
+      <span class="err" id="eMail"></span>
     </div>
 
     <div class="namebox">
@@ -461,15 +469,32 @@ if (!CONFIG.URGENCIA) $("urgencia").style.display = "none";
    ========================================================= */
 var lead = null;
 
+/* Devolve só os dígitos do número, já sem código de país.
+   O preenchimento automático (Instagram, Google, iOS) às vezes entrega
+   "+55 79 98172-6045" e às vezes "(79) 98172-6045". Sem isto, o 55 era
+   lido como DDD, tudo deslocava e os 2 últimos dígitos sumiam calados.
+   O corte é pelo comprimento porque DDD 55 existe (Santa Maria/RS):
+   número com 11 dígitos ou menos nunca tem código de país junto. */
+function normalizarTel(v){
+  var d = String(v || "").replace(/\D/g, "");
+  if (d.length > 11 && d.slice(0,2) === "55") d = d.slice(2);   // +55
+  if (d.length > 10 && d.charAt(0) === "0")   d = d.slice(1);   // 0 de longa distância
+  return d.slice(0,11);
+}
+
 function mascaraTel(v){
-  var d = v.replace(/\D/g,"").slice(0,11);
+  var d = normalizarTel(v);
   if (!d) return "";
   if (d.length <= 2)  return "(" + d;
   if (d.length <= 6)  return "(" + d.slice(0,2) + ") " + d.slice(2);
   if (d.length <= 10) return "(" + d.slice(0,2) + ") " + d.slice(2,6) + "-" + d.slice(6);
   return "(" + d.slice(0,2) + ") " + d.slice(2,7) + "-" + d.slice(7);
 }
-$("fZap").addEventListener("input", function(){ this.value = mascaraTel(this.value); });
+/* "input" sozinho não basta: parte dos preenchimentos automáticos
+   só dispara "change", e alguns nenhum dos dois até o campo perder o foco. */
+["input","change","blur"].forEach(function(ev){
+  $("fZap").addEventListener(ev, function(){ this.value = mascaraTel(this.value); });
+});
 
 function marcar(campo, alvo, ok, msg){
   $(campo).className = ok ? "" : "bad";
@@ -479,18 +504,22 @@ function marcar(campo, alvo, ok, msg){
 
 $("goQuiz").addEventListener("click", function(){
   var nome   = $("fNome").value.trim();
-  var zap    = $("fZap").value.replace(/\D/g,"");
+  var zap    = normalizarTel($("fZap").value);
+  var mail   = $("fMail").value.trim().toLowerCase();
   var perfil = $("fPerfil").value;
 
   var erro = false;
   erro = marcar("fNome",  "eNome",  nome.length >= 2, "Como podemos te chamar?") || erro;
   erro = marcar("fZap",   "eZap",   zap.length === 10 || zap.length === 11,
                 "Coloque DDD + número, com o 9 na frente.") || erro;
+  erro = marcar("fMail",  "eMail",  /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail),
+                "Confira o e-mail: falta algo nele.") || erro;
   erro = marcar("fPerfil","ePerfil", !!perfil, "Escolha uma opção.") || erro;
   if (erro) return;
 
-  lead = { leadId:novoId(), nome:nome, whatsapp:zap, perfil:perfil };
-  enviar({ tipo:"lead", leadId:lead.leadId, nome:nome, whatsapp:zap, perfil:perfil });
+  lead = { leadId:novoId(), nome:nome, whatsapp:zap, email:mail, perfil:perfil };
+  enviar({ tipo:"lead", leadId:lead.leadId, nome:nome, whatsapp:zap,
+           email:mail, perfil:perfil });
   if (window.fbq) fbq('track','Lead',{content_name:'Diagnostico Clinica Lucrativa'});
 
   show("quiz"); render();
